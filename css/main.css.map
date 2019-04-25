@@ -1,0 +1,1 @@
+{"version":3,"file":"main.css","sources":["main.scss"],"sourcesContent":[".top {\r\n\tbackground-image: url('../img/back-desktop.jpg');\r\n}\r\n.wrap-cnt {\r\n\twidth: 950px;\r\n\tmargin: 0 auto;\r\n}"],"names":[],"mappings":"AAAA,AAAA,IAAI,CAAC;EACJ,gBAAgB,EAAE,8BAA8B,GAChD;;AACD,AAAA,SAAS,CAAC;EACT,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,MAAM,GACd"}

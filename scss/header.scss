@@ -1,0 +1,23 @@
+.header {
+	display:flex;
+	justify-content: space-between;
+	padding: 25px 0 40px;
+	&-wrap {
+		background: rgba(0,0,0,0.3);
+	}
+}
+.nav-menu {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	display: flex;
+	&__el {
+		display: flex;
+		align-items: center;
+		margin-left: 75px;
+	}
+	&__link {
+		text-decoration: none;
+		color: #fff;
+	}
+}
