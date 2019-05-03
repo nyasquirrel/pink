@@ -1,39 +1,3 @@
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box; }
-
-.top {
-  background-image: url("../img/back-desktop.jpg");
-  background-size: cover; }
-
-.wrap-cnt {
-  width: 950px;
-  margin: 0 auto; }
-
-.header-wrap {
-  margin-bottom: 100px; }
-
-.header {
-  display: flex;
-  justify-content: space-between;
-  padding: 25px 0 40px; }
-  .header-wrap {
-    background: rgba(0, 0, 0, 0.3); }
-
-.nav-menu {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex; }
-  .nav-menu__el {
-    display: flex;
-    align-items: center;
-    margin-left: 75px; }
-  .nav-menu__link {
-    text-decoration: none;
-    color: #fff; }
-
 .offer {
   display: flex; }
   .offer__feature {
@@ -68,4 +32,4 @@
     top: 64px;
     left: 252px; }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=offer.css.map */

@@ -1,7 +1,20 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
 .top {
 	background-image: url('../img/back-desktop.jpg');
+	background-size: cover;
 }
 .wrap-cnt {
 	width: 950px;
 	margin: 0 auto;
 }
+.header-wrap {
+	margin-bottom: 100px;
+}
+
+@import "header.scss";
+@import "offer.scss";
