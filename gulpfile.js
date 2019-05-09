@@ -6,10 +6,10 @@ const browserSync = require('browser-sync').create();
 
 
 gulp.task('sass-compile', function () {
-	return gulp.src('./scss/**/*.scss')
+	return gulp.src('./scss/**/main.scss')
 	.pipe(sourcemaps.init())
 	.pipe(sass().on('error', sass.logError))
-	.pipe(sourcemaps.write('./'))
+	.pipe(sourcemaps.write('./'))W
 	.pipe(gulp.dest('./css/'));
 });
 
