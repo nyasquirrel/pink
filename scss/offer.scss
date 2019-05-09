@@ -1,6 +1,10 @@
 .offer {
 	display: flex;
+	flex-direction: row-reverse;
 	&__feature {
+		display: flex;
+    flex-direction: column;
+    align-items: center;
 		color: #ffffff;
 		text-align: center;
 		width: 310px;
@@ -9,6 +13,9 @@
 	&__promo {
 		font-size: 50px;
 		padding-bottom: 60px;
+		width: 300px;
+		font-weight: normal;
+		font-size: $desctop-title-fz;
 	}
 	&__button {
 		background: rgba(255, 255, 255, 0);
@@ -28,9 +35,13 @@
 		justify-content: space-around;
 		align-items: center;
 		margin-bottom: 60px;
+		align-self: stretch;
 	}
 	&__hand-mobile {
 		position: relative;
+	}
+	&__hand {
+		display: flex;
 	}
 	&__mobile-scr {
 		position: absolute;
