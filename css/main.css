@@ -48,6 +48,10 @@
   background-color: #283645;
   background-image: url("../img/back-desktop.jpg");
   background-size: cover; }
+  .top-header {
+    margin-bottom: 100px;
+    position: relative;
+    background: rgba(0, 0, 0, 0.3); }
 
 .header {
   padding: 25px 0 35px; }
@@ -162,7 +166,8 @@
     width: 100%; }
   .nav-menu__el {
     margin-left: 0;
-    justify-content: center; }
+    justify-content: center;
+    padding: 16px 0; }
   .nav-menu__toggle {
     display: block; } }
 
@@ -175,9 +180,7 @@
   margin: 0 auto;
   padding: 0 20px; }
 
-.wrap-header {
-  margin-bottom: 100px;
-  position: relative;
-  background: rgba(0, 0, 0, 0.3); }
+.wrap-logo {
+  padding-bottom: 25px; }
 
 /*# sourceMappingURL=main.css.map */

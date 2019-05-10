@@ -2,4 +2,9 @@
 	background-color: #283645;
 	background-image: url('../img/back-desktop.jpg');
 	background-size: cover;
+	&-header {
+		margin-bottom: 100px;
+		position: relative;
+		background: rgba(0,0,0,0.3);
+	}
 }
