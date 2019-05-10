@@ -1,14 +1,15 @@
 .header {
-	display:flex;
-	justify-content: space-between;
 	padding: 25px 0 35px;
-	&-wrap {
-		background: rgba(0,0,0,0.3);
-	}
 	&__logo {
 		display: block;
 		height: 50px;
 		width: 150px;
+	}
+	&-inner {
+		width: 950px;
+		margin: 0 auto;
+		display:flex;
+		justify-content: space-between;
 	}
 }
 @media (min-width: $desctop-w) {
@@ -18,17 +19,24 @@
 		}
 	}
 }
-@media (min-width: $table-w) and (max-width: $desctop-w) {
+@media screen and (max-width: $desctop-w) {
 	.header {
 		&__logo {
 			background: url("/img/logotype-white-tablet.png") no-repeat 50% 50%;
+			margin-left: 20px;
+		}
+		&-inner {
+			width: 100%;
+			flex-direction: column;
 		}
 	}
 }
 @media (max-width: $table-w) {
 	.header {
+		padding: 20px 0 25px;
 		&__logo {
 			background: url("/img/logotype-white-mobile.png") no-repeat 0% 50%;
+			height: 25px;
 		}
 	}
 }
