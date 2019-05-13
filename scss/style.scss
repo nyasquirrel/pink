@@ -6,12 +6,7 @@
 	margin: 0;
 	box-sizing: border-box;
 	font-family: $main-font;
-	font-size: 18px;
 }
 
-
-@import "top.scss";
-@import "header.scss";
-@import "offer.scss";
-@import "nav-menu.scss";
 @import "wrappers.scss";
+@import "header.scss";

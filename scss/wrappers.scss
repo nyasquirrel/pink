@@ -1,10 +1,5 @@
-.wrap {
-	&-cnt {
-	max-width: 990px;
-	margin: 0 auto;
-	padding: 0 20px;
-	}
-	&-logo {
-		padding-bottom: 25px;
-	}
+.wrapper {
+  min-width: 320px;
+  padding: 0 20px;
+  margin: 0 auto;
 }

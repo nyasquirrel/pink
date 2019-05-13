@@ -6,14 +6,14 @@ const browserSync = require('browser-sync').create();
 
 
 gulp.task('sass-compile', function () {
-	return gulp.src('./scss/**/main.scss')
-	.pipe(sourcemaps.init())
-	.pipe(sass().on('error', sass.logError))
-	.pipe(sourcemaps.write('./'))
-	.pipe(gulp.dest('./css/'));
+	return gulp.src('./scss/**/style.scss')
+		.pipe(sourcemaps.init())
+		.pipe(sass().on('error', sass.logError))
+		.pipe(sourcemaps.write('./'))
+		.pipe(gulp.dest('./css/'));
 });
 
 
-gulp.task('watch', function() {
+gulp.task('watch', function () {
 	gulp.watch('./**/*.scss', gulp.series('sass-compile'));
 })
