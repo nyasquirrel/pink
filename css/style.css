@@ -48,6 +48,34 @@
 .header {
   background-color: rgba(0, 0, 0, 0.3); }
   .header__inner {
-    padding: 21px 0; }
+    padding: 21px 20px 16px;
+    display: flex;
+    justify-content: space-between; }
+
+.nav-menu {
+  display: none; }
+  .nav-menu__list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column; }
+  .nav-menu__item {
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+    border-bottom: 1px solid #000;
+    display: flex; }
+  .nav-menu__link {
+    padding: 22px 0;
+    text-align: center;
+    flex: 1; }
+
+.promo {
+  margin-top: -66px;
+  padding-top: 462px;
+  background-color: #1d2631;
+  background-image: url("/img/back-desktop.jpg.png");
+  background-repeat: no-repeat;
+  background-size: auto 462px;
+  background-position: 50% 0; }
 
 /*# sourceMappingURL=style.css.map */
