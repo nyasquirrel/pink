@@ -1,0 +1,19 @@
+.feature {
+  background: #fff url("/img/Shape_2.png") no-repeat top/cover;
+  &__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px;
+  }
+  &__el {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  &__title {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+}

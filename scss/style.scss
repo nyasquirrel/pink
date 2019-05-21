@@ -7,8 +7,15 @@
 	box-sizing: border-box;
 	font-family: $main-font;
 }
+body {
+	font-size: 14px;
+	line-height: 30px;
+}
 
+@import "button.scss";
 @import "wrappers.scss";
 @import "header.scss";
 @import "nav-menu.scss";
 @import "promo.scss";
+@import "page-offer.scss";
+@import "feature.scss";

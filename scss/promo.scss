@@ -2,9 +2,33 @@
   position: relative;
   margin-top: -66px;
   padding-top: 462px;
-  background-color: #1d2631;
-  background-image: url('/img/back-desktop.jpg.png');
-  background-repeat: no-repeat;
-  background-size: auto 462px;
-  background-position: 50% 0;
+  background: #1d2631 url('/img/back-desktop.jpg.png') top center/auto 462px no-repeat;
+  color: #fff;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 28px 0 35px;
+  }
+  &__title {
+    display: none;
+  }
+  &__button {
+    margin-bottom: 30px;
+  }
+  &__app-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 0 30px;
+    margin-bottom: 30px;
+  }
+  &__description {
+    line-height: 24px;
+    text-align: center;
+    padding: 0 30px;
+    font-weight: lighter;
+  }
 }
