@@ -42,7 +42,8 @@
 
 body {
   font-size: 14px;
-  line-height: 30px; }
+  line-height: 30px;
+  min-width: 320px; }
 
 .button {
   font-size: 18px;
@@ -58,7 +59,7 @@ body {
     color: #fff; }
 
 .wrapper {
-  min-width: 320px;
+  min-width: 280px;
   padding: 0 20px;
   margin: 0 auto; }
 
