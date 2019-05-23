@@ -127,7 +127,8 @@ body {
     margin-bottom: 40px; }
 
 .feature {
-  background: #fff url("/img/Shape_2.png") no-repeat top/cover; }
+  background: #fff url("/img/Shape_2.png") no-repeat top/cover;
+  position: relative; }
   .feature__inner {
     display: flex;
     flex-direction: column;
@@ -136,10 +137,49 @@ body {
   .feature__el {
     margin-bottom: 40px;
     text-align: center; }
+    .feature__el:nth-child(1)::after {
+      content: "";
+      display: none;
+      position: absolute;
+      width: 186px;
+      height: 301px;
+      background: url("/img/iphone_screen_1.png") no-repeat center bottom/contain; }
+    .feature__el:nth-child(2)::after {
+      content: "";
+      display: none;
+      position: absolute;
+      width: 186px;
+      height: 301px;
+      background: url("/img/iphone_screen_2.png") no-repeat center bottom/contain; }
+    .feature__el:nth-child(3) {
+      margin-bottom: 320px; }
+      .feature__el:nth-child(3)::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 157px;
+        height: 277px;
+        background: url("/img/iphone_screen_3.png") no-repeat center bottom/contain; }
   .feature__title {
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
     margin-bottom: 20px; }
+
+.reviews {
+  padding: 50px 0 35px;
+  min-height: 350px; }
+  .reviews__inner {
+    display: flex;
+    flex-direction: column; }
+  .reviews__el {
+    display: none; }
+    .reviews__el--show {
+      display: block; }
+
+.dots {
+  list-style: none; }
 
 /*# sourceMappingURL=style.css.map */

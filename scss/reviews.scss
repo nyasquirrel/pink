@@ -1,0 +1,14 @@
+.reviews {
+  padding: 50px 0 35px;
+  min-height: 350px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+  &__el {
+    display: none;
+    &--show {
+      display: block;
+    }
+  }
+}
