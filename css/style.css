@@ -173,13 +173,62 @@ body {
   min-height: 350px; }
   .reviews__inner {
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    text-align: center; }
   .reviews__el {
     display: none; }
     .reviews__el--show {
       display: block; }
+  .reviews__title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 15px; }
+  .reviews__descr {
+    padding: 0 3px;
+    margin-bottom: 40px; }
 
 .dots {
-  list-style: none; }
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .dots__el {
+    width: 6px;
+    height: 6px;
+    background-color: #bec3c7;
+    border-radius: 15px;
+    margin: 0 10px; }
+    .dots__el--active {
+      background-color: #fff;
+      border: 3px solid #283645;
+      box-sizing: content-box; }
+
+.price {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 50px;
+  overflow: hidden;
+  align-items: center;
+  background: #fff url("/img/Shape_2.png") no-repeat top/cover;
+  border-collapse: collapse; }
+  .price th,
+  .price td {
+    border: 2px solid #e5e5e5;
+    min-width: 260px;
+    padding: 20px 10px; }
+  .price__table {
+    border-collapse: collapse;
+    background-color: #fff; }
+  .price__tariff {
+    border: 2px solid #283645;
+    border-right: 2px solid #e5e5e5;
+    background: #283645;
+    color: #fff; }
+  .price__tariff-inner {
+    display: inline-flex;
+    flex-direction: column; }
+  .price__el-hidden {
+    visibility: hidden; }
 
 /*# sourceMappingURL=style.css.map */

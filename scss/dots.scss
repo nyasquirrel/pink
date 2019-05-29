@@ -1,3 +1,18 @@
 .dots {
   list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__el {
+    width: 6px;
+    height: 6px;
+    background-color: #bec3c7;
+    border-radius: 15px;
+    margin: 0 10px;
+    &--active {
+      background-color: #fff;
+      border: 3px solid #283645;
+      box-sizing: content-box;
+    }
+  }
 }

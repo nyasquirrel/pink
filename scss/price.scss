@@ -1,0 +1,32 @@
+.price {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 0 50px;
+  overflow: hidden;
+  align-items: center;
+  background: #fff url("/img/Shape_2.png") no-repeat top/cover;
+  border-collapse: collapse;
+  th,
+  td {
+    border: 2px solid #e5e5e5;
+    min-width: 260px;
+    padding: 20px 10px;
+  }
+  &__table {
+    border-collapse: collapse;
+    background-color: #fff;
+  }
+  &__tariff {
+    border: 2px solid #283645;
+    border-right: 2px solid #e5e5e5;
+    background: #283645;
+    color: #fff;
+  }
+  &__tariff-inner {
+    display: inline-flex;
+    flex-direction: column;
+  }
+  &__el-hidden {
+    visibility: hidden;
+  }
+}

@@ -4,6 +4,7 @@
   &__inner {
     display: flex;
     flex-direction: column;
+    text-align: center;
   }
   &__el {
     display: none;
@@ -11,4 +12,14 @@
       display: block;
     }
   }
-}
+  &__title {
+    font-size: 18px;
+    line-height: 30px;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  &__descr {
+    padding: 0 3px;
+    margin-bottom: 40px;
+  }
+} 
