@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Open Sans';
   src: url("../fonts/OpenSans-Regular.ttf");
@@ -216,7 +217,7 @@ body {
   .price td {
     border: 2px solid #e5e5e5;
     min-width: 260px;
-    padding: 20px 10px; }
+    padding: 20px; }
   .price__table {
     border-collapse: collapse;
     background-color: #fff; }
@@ -224,11 +225,72 @@ body {
     border: 2px solid #283645;
     border-right: 2px solid #e5e5e5;
     background: #283645;
-    color: #fff; }
+    color: #fff;
+    position: relative;
+    overflow: hidden; }
+    .price__tariff:nth-of-type(2)::before {
+      content: "Хит";
+      width: 100px;
+      transform: rotate(-45deg);
+      position: absolute;
+      font-size: 14px;
+      font-weight: lighter;
+      line-height: 21px;
+      padding: 3px;
+      text-transform: uppercase;
+      top: 10px;
+      left: -30px;
+      background-color: #d22856; }
+  .price__tariff-name {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase; }
+  .price__tariff-value {
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: lighter; }
   .price__tariff-inner {
     display: inline-flex;
     flex-direction: column; }
   .price__el-hidden {
     visibility: hidden; }
+  .price__mark {
+    display: flex;
+    justify-content: flex-start; }
+    .price__mark img {
+      margin-left: auto; }
+  .price__dots {
+    margin-top: 45px; }
+
+.contacts {
+  padding-top: 50px;
+  text-align: center; }
+  .contacts__offer {
+    font-size: 24px;
+    color: #283645;
+    text-align: center;
+    margin-bottom: 45px; }
+  .contacts__el {
+    margin-bottom: 20px;
+    position: relative; }
+  .contacts__title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #283645; }
+  .contacts__data {
+    font-size: 24px;
+    font-weight: lighter;
+    color: #d22856;
+    text-decoration: none; }
+  .contacts__map {
+    overflow: hidden;
+    position: relative; }
+    .contacts__map::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 123px;
+      background: url("/img/triangle-white-footer.svg.png") no-repeat top center/cover; }
 
 /*# sourceMappingURL=style.css.map */

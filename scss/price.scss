@@ -10,7 +10,7 @@
   td {
     border: 2px solid #e5e5e5;
     min-width: 260px;
-    padding: 20px 10px;
+    padding: 20px;
   }
   &__table {
     border-collapse: collapse;
@@ -21,6 +21,33 @@
     border-right: 2px solid #e5e5e5;
     background: #283645;
     color: #fff;
+    position: relative;
+    overflow: hidden;
+    &:nth-of-type(2)::before {
+      content: "Хит";
+      width: 100px;
+      transform: rotate(-45deg);
+      position: absolute;
+      font-size: 14px;
+      font-weight: lighter;
+      line-height: 21px;
+      padding: 3px;
+      text-transform: uppercase;
+      top: 10px;
+      left: -30px;
+      background-color: #d22856;
+    }
+  }
+  &__tariff-name {
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: uppercase;
+  }
+  &__tariff-value {
+    font-size: 24px;
+    line-height: 30px;
+    text-transform: uppercase;
+    font-weight: lighter;
   }
   &__tariff-inner {
     display: inline-flex;
@@ -28,5 +55,15 @@
   }
   &__el-hidden {
     visibility: hidden;
+  }
+  &__mark {
+    display: flex;
+    justify-content: flex-start;
+    img {
+      margin-left: auto;
+    }
+  }
+  &__dots {
+    margin-top: 45px;
   }
 }
