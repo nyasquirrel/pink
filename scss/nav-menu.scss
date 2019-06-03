@@ -1,5 +1,6 @@
 .nav-menu {
-  display: none;
+  position: relative;
+  z-index: 2;
   &__list {
     margin: 0;
     padding: 0;
@@ -13,8 +14,48 @@
     display: flex;
   }
   &__link {
+    font-weight: bold;
+    font-size: 18px;
     padding: 22px 0;
     text-align: center;
     flex: 1;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
   }
 }
+
+@media (max-width: $desctop-w) {
+  .nav-menu {
+    &--opened {
+      display: block;
+    }
+    &--closed {
+      display: none;
+    }
+    &--no-js {
+      display: block;
+    }
+  }
+}
+@media (min-width: $desctop-w) {
+  .nav-menu {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    &__list {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    &__item {
+      border: none;
+      margin-left: 80px;
+    }
+    &__link {
+      font-weight: normal;
+      text-transform: none;
+      padding: 0;
+    }
+  }
+}
+  

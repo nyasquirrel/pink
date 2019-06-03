@@ -32,3 +32,8 @@
     font-weight: lighter;
   }
 }
+@media (min-width: $tablet-w) {
+  .promo {
+    margin-top: -110px;
+  }
+}

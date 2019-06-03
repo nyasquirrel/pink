@@ -1,10 +1,80 @@
 .header {
   background-color: rgba(0,0,0,.3);
   position: relative;
-  z-index: 5;
+  z-index: 2;
+  min-height: 66px;
   &__inner {
-    padding: 21px 20px 16px;
+    padding: 21px 20px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+  }
+  &__logo {
+    width: 75px;
+    height: 22px;
+    background: url("/img/logotype-white-mobile.svg.png") no-repeat top center/contain;
+  }
+  &__hamburger {
+    width: 50px;
+    height: 24px;
+    background: url("/img/menu-burger.svg.png") no-repeat top center/contain;
+    cursor: pointer;
+  }
+}
+@media (max-width: $desctop-w) {
+  .header {
+    &--opened {
+      background-color: #283645;
+      .header__inner {
+        border-bottom: 1px solid #000;
+      }
+    }
+    &--closed {
+      background-color: rgba(0,0,0,.3);
+    }
+    &--no-js {
+      background-color: #283645;
+    }
+  }
+}
+@media (min-width: $tablet-w) and (max-width: $desctop-w) {
+  .header {
+    &__inner {
+      min-height: 110px;
+      padding: 35px 20px;
+      max-width: 940px;
+    }
+  }
+}
+@media (min-width: $tablet-w) {
+  .header {
+    &__logo {
+      width: 147px;
+      height: 40px;
+      background: url("/img/logotype-white-tablet.svg.png") no-repeat top center/contain;
+    } 
+  }
+}
+
+@media (min-width: $desctop-w) {
+  .header {
+    &__logo {
+      background: url("/img/logotype-white-desktop.svg.png") no-repeat top center/contain;
+    }
+    &__inner {
+      padding: 0;
+      min-height: 0;
+    }
+    &__hamburger {
+      display: none;
+    }
+    &__wrapper {
+      width: 960px;
+      min-height: 110px;
+      padding: 35px 10px;
+      margin: 0 auto;
+      display: flex;
+    }
   }
 }
