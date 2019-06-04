@@ -12,3 +12,8 @@
     color: #fff;
   }
 }
+@media (min-width: $tablet-w) {
+  .button {
+    width: 300px;
+  }
+}

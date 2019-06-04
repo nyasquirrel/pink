@@ -1,9 +1,13 @@
 .promo {
+  display: flex;
   position: relative;
   margin-top: -66px;
-  padding-top: 462px;
-  background: #1d2631 url('/img/back-desktop.jpg.png') top center/auto 462px no-repeat;
+  min-height: 462px;
+  background: #1d2631 url('/img/back-mobile@1x.jpg.png') top center/auto no-repeat;
   color: #fff;
+  &__wrapper {
+    margin-top: 462px;
+  }
   &__content {
     display: flex;
     flex-direction: column;
@@ -12,6 +16,12 @@
   }
   &__title {
     display: none;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: lighter;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 40px;
   }
   &__button {
     margin-bottom: 30px;
@@ -32,8 +42,32 @@
     font-weight: lighter;
   }
 }
+@media (min-width: $mobile-w) and (max-width: $desctop-w) {
+  .promo {
+    background: #1d2631 url('/img/back-tablet@1x.png') top center/auto 462px no-repeat;
+  }
+}
 @media (min-width: $tablet-w) {
   .promo {
     margin-top: -110px;
+    min-height: 729px;
+    background-size: auto 729px;
+    &__content {
+      width: 300px;
+      padding-top: 0;
+    }
+    &__wrapper {
+      margin-top: 210px;
+      margin-left: 0;
+    }
+    &__title {
+      display: block;
+    }
+  }
+}
+@media (min-width: $desctop-w) {
+  .promo {
+    min-height: 853px;
+    background: #1d2631 url('/img/back-desktop.jpg.png') top center/cover no-repeat;
   }
 }

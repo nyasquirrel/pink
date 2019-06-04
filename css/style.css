@@ -59,10 +59,22 @@ body {
     background: none;
     color: #fff; }
 
+@media (min-width: 660px) {
+  .button {
+    width: 300px; } }
+
 .wrapper {
   min-width: 280px;
   padding: 0 20px;
   margin: 0 auto; }
+
+@media (min-width: 660px) {
+  .wrapper {
+    width: 660px; } }
+
+@media (min-width: 1200px) {
+  .wrapper {
+    width: 960px; } }
 
 .header {
   background-color: rgba(0, 0, 0, 0.3);
@@ -84,6 +96,10 @@ body {
     height: 24px;
     background: url("/img/menu-burger.svg.png") no-repeat top center/contain;
     cursor: pointer; }
+    .header__hamburger--toggled {
+      width: 24px;
+      height: 23px;
+      background: url("/img/menu-cross.svg.png") no-repeat top center/contain; }
 
 @media (max-width: 1200px) {
   .header--opened {
@@ -170,18 +186,27 @@ body {
       padding: 0; } }
 
 .promo {
+  display: flex;
   position: relative;
   margin-top: -66px;
-  padding-top: 462px;
-  background: #1d2631 url("/img/back-desktop.jpg.png") top center/auto 462px no-repeat;
+  min-height: 462px;
+  background: #1d2631 url("/img/back-mobile@1x.jpg.png") top center/auto no-repeat;
   color: #fff; }
+  .promo__wrapper {
+    margin-top: 462px; }
   .promo__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 28px 0 35px; }
   .promo__title {
-    display: none; }
+    display: none;
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: lighter;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 40px; }
   .promo__button {
     margin-bottom: 30px; }
   .promo__app-list {
@@ -198,9 +223,28 @@ body {
     padding: 0 30px;
     font-weight: lighter; }
 
+@media (min-width: 320px) and (max-width: 1200px) {
+  .promo {
+    background: #1d2631 url("/img/back-tablet@1x.png") top center/auto 462px no-repeat; } }
+
 @media (min-width: 660px) {
   .promo {
-    margin-top: -110px; } }
+    margin-top: -110px;
+    min-height: 729px;
+    background-size: auto 729px; }
+    .promo__content {
+      width: 300px;
+      padding-top: 0; }
+    .promo__wrapper {
+      margin-top: 210px;
+      margin-left: 0; }
+    .promo__title {
+      display: block; } }
+
+@media (min-width: 1200px) {
+  .promo {
+    min-height: 853px;
+    background: #1d2631 url("/img/back-desktop.jpg.png") top center/cover no-repeat; } }
 
 .page-offer {
   font-size: 24px;

@@ -3,3 +3,15 @@
   padding: 0 20px;
   margin: 0 auto;
 }
+
+@media (min-width: $tablet-w) {
+  .wrapper{
+    width: 660px;
+  }
+}
+
+@media (min-width: $desctop-w) {
+  .wrapper{
+    width: 960px;
+  }
+}
