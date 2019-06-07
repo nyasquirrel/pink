@@ -1,0 +1,32 @@
+.round-diagram {
+  padding-top: 60px;
+  display: none;
+  @media (min-width: $tablet-w) {
+    display: block;
+  }
+  &__inner {
+    display: flex;
+    align-items: center;
+  }
+  &__timer {
+    margin-right: 70px;
+  }
+  &__information {
+    padding-right: 10px;
+  }
+  &__title {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 36px;
+    margin-bottom: 10px;
+    br {
+      @media (min-width: $desctop-w) {
+        display: none;
+      }
+    }
+  }
+  &__description {
+    color: #283645;
+    line-height: 10px;
+  }
+}

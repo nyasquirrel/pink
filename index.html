@@ -39,55 +39,101 @@
 	<div class="promo">
 		<div class="wrapper">
 			<div class="promo__wrapper">
-				<div class="promo__content">
+				<section class="promo__content">
 					<span class="promo__title">Взгляните
 						на жизнь
 						иначе!</span>
 					<button class="promo__button button button__download">Скачать приложение</button>
 					<ul class="promo__app-list">
 						<li class="promo__app-item">
-							<img src="/img/apple-logo.svg.png" alt="" width="47" height="56">
+							<img src="img/apple-logo.svg.png" alt="" width="47" height="56">
 						</li>
 						<li class="promo__app-item">
-							<img src="/img/android-logo.svg.png" alt="" width="43" height="47">
+							<img src="img/android-logo.svg.png" alt="" width="43" height="47">
 						</li>
 						<li class="promo__app-item">
-							<img src="/img/microsoft-logo.svg.png" alt="" width="44" height="41">
+							<img src="img/microsoft-logo.svg.png" alt="" width="44" height="41">
 						</li>
 					</ul>
 					<div class="promo__description">Доступно для iPhone, iPad, Android, Windows Phone, OS X, Windows 8</div>
-				</div>
+				</section>
+				<picture>
+					<source media="(min-width: 1200px)" srcset="img/iphone-in-hand--desctop.png">
+					<source media="(min-width: 660px)" srcset="img/iphone-in-hand--table.png">
+					<img src="img/iphone-in-hand--mobile.png" alt="Айфон в руке" class="promo__img-iphone">
+				</picture>
 			</div>
 		</div>
 	</div>
 	<div class="page-offer">
 		<div class="wrapper">
 			<p>Устали от серости мегаполиса?</p>
-			<p>Нам есть, что вам
+			<p>Нам есть, что вам<br>
 				предложить!</p>
 		</div>
 	</div>
 	<div class="feature">
 		<div class="wrapper">
 			<div class="feature__inner">
-				<div class="feature__el">
-					<div class="feature__title">Поднимает настроение</div>
-					<span class="feature__description">
-						Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+				<section class="feature__screens">
+					<div class="feature__screen-el">
+						<picture>
+							<img src="img/iphone_screen_1--desctop.png" alt="Первый скрин айфона">
+						</picture>
+					</div>
+					<div class="feature__screen-el">
+						<picture>
+							<img src="img/iphone_screen_2--desctop.png" alt="Второй скрин айфона">
+						</picture>
+					</div>
+					<div class="feature__screen-el">
+						<picture>
+							<source media="(min-width: 1200px)" srcset="img/iphone_screen_3--desctop.png">
+							<source media="(min-width: 660px)" srcset="img/iphone_screen_3--tablet.png">
+							<img src="img/iphone_screen_3--mobile.png" alt="Трейтий скрин айфона">
+						</picture>
+					</div>
+				</section>
+				<section class="feature__information">
+					<div class="feature__information-el">
+						<div class="feature__title">Поднимает настроение</div>
+						<span class="feature__description">
+							Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
+						</span>
+					</div>
+					<div class="feature__information-el">
+						<div class="feature__title">Меняет мир вокруг</div>
+						<span class="feature__description">
+							Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
+							усилить эффект</span>
+					</div>
+					<div class="feature__information-el">
+						<div class="feature__title">Заводит новых друзей</div>
+						<span class="feature__description">
+							Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
+						</span>
+					</div>
+				</section>
+			</div>
+		</div>
+	</div>
+	<div class="round-diagram">
+		<div class="wrapper">
+			<div class="round-diagram__inner">
+				<section class="round-diagram__timer">
+					<img src="img/timer.png" alt="Таймер 24 часа">
+				</section>
+				<section class="round-diagram__information">
+					<div class="round-diagram__title">Эффект<br>
+						на 24 часа!</div>
+					<span class="round-diagram__description">
+						Британские ученые провели исследования
+						и доказали, что положительный эффект
+						от использования приложения длится
+						целые сутки!
 					</span>
-				</div>
-				<div class="feature__el">
-					<div class="feature__title">Меняет мир вокруг</div>
-					<span class="feature__description">
-						Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы
-						усилить эффект</span>
-				</div>
-				<div class="feature__el">
-					<div class="feature__title">Заводит новых друзей</div>
-					<span class="feature__description">
-						Ставьте лайки, комментируйте, делитесь фотографиями с друзьями и заводите новых
-					</span>
-				</div>
+					<div class="round-diagram__more-info-link"><a href="#">Узнать больше об исследовании</a></div>
+				</section>
 			</div>
 		</div>
 	</div>

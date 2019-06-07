@@ -3,7 +3,15 @@
   color: #283645;
   padding-top: 45px;
   text-align: center;
+  font-weight: lighter;
+  @media (min-width: $tablet-w) {
+    font-size: 40px;
+    line-height: 45px;
+  }
   p {
     margin-bottom: 40px;
+    @media (min-width: $tablet-w) {
+      margin-bottom: 0;
+    }
   }
 }

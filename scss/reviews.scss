@@ -1,6 +1,13 @@
 .reviews {
   padding: 50px 0 35px;
   min-height: 350px;
+  margin-top: -50px;
+  position: relative;
+  z-index: 1;
+  background-color: #fff;
+  @media (min-width: $tablet-w) {
+    margin-top: 0;
+  }
   &__inner {
     display: flex;
     flex-direction: column;

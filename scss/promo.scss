@@ -4,6 +4,7 @@
   margin-top: -66px;
   min-height: 462px;
   background: #1d2631 url('/img/back-mobile@1x.jpg.png') top center/auto no-repeat;
+  overflow: hidden;
   color: #fff;
   &__wrapper {
     margin-top: 462px;
@@ -13,6 +14,9 @@
     flex-direction: column;
     align-items: center;
     padding: 28px 0 35px;
+    position: relative;
+    background-color: #1d2631;
+    z-index: 1;
   }
   &__title {
     display: none;
@@ -41,10 +45,26 @@
     padding: 0 30px;
     font-weight: lighter;
   }
+  &__img-iphone {
+    position: absolute;
+    top: 175px;
+    right: -10px;
+  }
 }
 @media (min-width: $mobile-w) and (max-width: $desctop-w) {
   .promo {
     background: #1d2631 url('/img/back-tablet@1x.png') top center/auto 462px no-repeat;
+  }
+}
+@media (max-width: 590px) {
+  .promo {
+    &__content {
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+    .wrapper {
+      padding: 0;
+    }
   }
 }
 @media (min-width: $tablet-w) {
@@ -55,6 +75,7 @@
     &__content {
       width: 300px;
       padding-top: 0;
+      background: none;
     }
     &__wrapper {
       margin-top: 210px;
@@ -63,11 +84,38 @@
     &__title {
       display: block;
     }
+    &__img-iphone {
+      bottom: 0px;
+      top: auto;
+      right: -115px;
+    }
+    &__button {
+      margin-bottom: 45px;
+    }
+    &__app-list {
+      margin-bottom: 40px;
+    }
+    &__description {
+      padding: 0;
+      font-size: 18px;
+    }
   }
 }
 @media (min-width: $desctop-w) {
   .promo {
     min-height: 853px;
     background: #1d2631 url('/img/back-desktop.jpg.png') top center/cover no-repeat;
+    &__img-iphone {
+      right: 0;
+    }
+    &__title {
+      margin-bottom: 60px;
+    }
+    &__button {
+      margin-bottom: 65px;
+    }
+    &__app-list {
+      margin-bottom: 60px;
+    }
   }
 }
