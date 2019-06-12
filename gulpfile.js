@@ -3,9 +3,20 @@
 // const sourcemaps = require('gulp-sourcemaps');
 // const browserSync = require('browser-sync').create();
 
+// gulp.task("copy", function () {
+// 	return gulp.src([
+// 		"src/fonts/**/*.{woff,woff2,ttf}",
+// 		"src/img/**",
+// 		"src/js/**",
+// 		"src/*.html"
+// 	], {
+// 			base: "src"
+// 		})
+// 		.pipe(gulp.dest("build/"));
+// });
 
 // gulp.task('sass', function () {
-// 	return gulp.src('./scss/**/style.scss')
+// 	return gulp.src('src/scss/**/style.scss')
 // 		.pipe(sourcemaps.init())
 // 		.pipe(sass().on('error', sass.logError))
 // 		.pipe(sourcemaps.write('./'))
@@ -23,21 +34,21 @@
 // 	gulp.watch("./*.html").on('change', browserSync.reload);
 // });
 
-var gulp = require("gulp");
-var sass = require("gulp-sass");
-var plumber = require("gulp-plumber");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var sourcemaps = require('gulp-sourcemaps');
-var server = require("browser-sync").create();
-var mqpacker = require("css-mqpacker");
-var minify = require("gulp-csso");
-var imagemin = require("gulp-imagemin");
-var rename = require("gulp-rename");
-var svgstore = require("gulp-svgstore");
-var svgmin = require("gulp-svgmin");
-var jsmin = require('gulp-jsmin');
-var del = require("del");
+const gulp = require("gulp");
+const sass = require("gulp-sass");
+const plumber = require("gulp-plumber");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const sourcemaps = require('gulp-sourcemaps');
+const server = require("browser-sync").create();
+const mqpacker = require("css-mqpacker");
+const minify = require("gulp-csso");
+const imagemin = require("gulp-imagemin");
+const rename = require("gulp-rename");
+const svgstore = require("gulp-svgstore");
+const svgmin = require("gulp-svgmin");
+const jsmin = require('gulp-jsmin');
+const del = require("del");
 
 gulp.task("clean", function () {
 	return del("build");
@@ -45,14 +56,14 @@ gulp.task("clean", function () {
 
 gulp.task("copy", function () {
 	return gulp.src([
-		"src/fonts/**/*.{woff,woff2}",
+		"src/fonts/**/*.{woff,woff2,ttf}",
 		"src/img/**",
 		"src/js/**",
 		"src/*.html"
 	], {
-			base: "."
+			base: "src"
 		})
-		.pipe(gulp.dest("build"));
+		.pipe(gulp.dest("build/"));
 });
 
 gulp.task("style", function () {
@@ -130,7 +141,7 @@ gulp.task("js:update", ["js:copy"], function (done) {
 
 gulp.task("serve", function () {
 	server.init({
-		proxy: "pink.local",
+		server: "build",
 		notify: false,
 		open: true,
 		cors: true,
@@ -150,4 +161,3 @@ gulp.task("build", gulp.series(
 	"images",
 	"sprite")
 );
-});
