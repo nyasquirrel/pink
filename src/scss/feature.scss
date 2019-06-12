@@ -10,6 +10,9 @@
     flex-direction: row;
     padding-top: 50px;
   }
+  @media (min-width: $desctop-w) {
+    flex-direction: column;
+  }
   }
   &__screens {
     display: flex;
@@ -27,6 +30,13 @@
   &__information {
     display: flex;
     flex-direction: column;
+    @media (min-width: $desctop-w) {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      justify-content: space-between;
+      padding: 0 30px;
+    }
   }
   &__information-el {
     margin-bottom: 40px;
@@ -35,12 +45,20 @@
     @media (min-width: $tablet-w) {
       text-align: left;
     }
+    @media (min-width: $desctop-w) {
+      width: 200px;
+      text-align: center;
+    }
   }
   &__title {
     font-size: 18px;
     line-height: 24px;
     font-weight: bold;
     margin-bottom: 10px;
+    @media (min-width: $desctop-w) {
+      font-size: 20px;
+      line-height: 30px;
+    }
   }
   &__description {
     color: #283645;

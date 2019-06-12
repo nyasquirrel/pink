@@ -4,7 +4,7 @@ const plumber = require("gulp-plumber");
 const postcss = require("gulp-postcss");
 const autoprefixer = require("autoprefixer");
 const sourcemaps = require('gulp-sourcemaps');
-const server = require("browser-sync").create();
+const browserSync = require("browser-sync").create();
 const mqpacker = require("css-mqpacker");
 const minify = require("gulp-csso");
 const imagemin = require("gulp-imagemin");
@@ -50,7 +50,7 @@ gulp.task("style", function () {
 		.pipe(rename("style.min.css"))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest("build/css"))
-		.pipe(server.stream());
+		.pipe(browserSync.stream());
 });
 
 gulp.task("images", function () {
@@ -78,7 +78,7 @@ gulp.task("html:copy", function () {
 });
 
 gulp.task("html:update", gulp.series("html:copy"), function (done) {
-	server.reload();
+	browserSync.reload();
 	done();
 });
 
@@ -91,13 +91,13 @@ gulp.task("js", function () {
 });
 
 gulp.task("js:update", gulp.series("js"), function (done) {
-	server.reload();
+	browserSync.reload();
 	done();
 });
 
 gulp.task("serve", function () {
-	server.init({
-		server: "build",
+	browserSync.init({
+		proxy: "pink.local",
 		notify: false,
 		open: true,
 		cors: true,
@@ -105,7 +105,7 @@ gulp.task("serve", function () {
 	});
 
 	gulp.watch("src/scss/**/*.{scss,sass}", gulp.series("style"));
-	gulp.watch("src/*.html", gulp.series("html:update")).on('change', server.reload);
+	gulp.watch("src/*.html", gulp.series("html:update")).on('change', browserSync.reload);
 	gulp.watch("src/js/script.js", gulp.series("js:update"));
 });
 
