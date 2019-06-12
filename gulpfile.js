@@ -1,39 +1,3 @@
-// const gulp = require('gulp');
-// const sass = require('gulp-sass');
-// const sourcemaps = require('gulp-sourcemaps');
-// const browserSync = require('browser-sync').create();
-
-// gulp.task("copy", function () {
-// 	return gulp.src([
-// 		"src/fonts/**/*.{woff,woff2,ttf}",
-// 		"src/img/**",
-// 		"src/js/**",
-// 		"src/*.html"
-// 	], {
-// 			base: "src"
-// 		})
-// 		.pipe(gulp.dest("build/"));
-// });
-
-// gulp.task('sass', function () {
-// 	return gulp.src('src/scss/**/style.scss')
-// 		.pipe(sourcemaps.init())
-// 		.pipe(sass().on('error', sass.logError))
-// 		.pipe(sourcemaps.write('./'))
-// 		.pipe(gulp.dest('./css/'))
-// 		.pipe(browserSync.stream());
-// });
-
-// gulp.task('serve', function () {
-
-// 	browserSync.init({
-// 		proxy: "pink.local"
-// 	});
-
-// 	gulp.watch("./**/*.scss", gulp.series('sass'));
-// 	gulp.watch("./*.html").on('change', browserSync.reload);
-// });
-
 const gulp = require("gulp");
 const sass = require("gulp-sass");
 const plumber = require("gulp-plumber");
@@ -67,9 +31,9 @@ gulp.task("copy", function () {
 });
 
 gulp.task("style", function () {
-	gulp.src("sass/style.scss")
-		.pipe(plumber())
+	return gulp.src("src/scss/style.scss")
 		.pipe(sourcemaps.init())
+		.pipe(plumber())
 		.pipe(sass().on('error', sass.logError))
 		.pipe(postcss([
 			autoprefixer({
@@ -109,32 +73,24 @@ gulp.task("sprite", function () {
 });
 
 gulp.task("html:copy", function () {
-	return gulp.src("*.html")
+	return gulp.src("src/*.html")
 		.pipe(gulp.dest("build"));
 });
 
-gulp.task("html:update", ["html:copy"], function (done) {
+gulp.task("html:update", gulp.series("html:copy"), function (done) {
 	server.reload();
 	done();
 });
 
 gulp.task("js", function () {
-	gulp.src("js/script.js")
+	return gulp.src("src/js/script.js")
 		.pipe(gulp.dest("build/js"))
 		.pipe(jsmin())
 		.pipe(rename("script.min.js"))
 		.pipe(gulp.dest("build/js"));
 });
 
-gulp.task("js:copy", function () {
-	return gulp.src("*js/script.js")
-		.pipe(gulp.dest("build/js"))
-		.pipe(jsmin())
-		.pipe(rename("script.min.js"))
-		.pipe(gulp.dest("build/js"));
-});
-
-gulp.task("js:update", ["js:copy"], function (done) {
+gulp.task("js:update", gulp.series("js"), function (done) {
 	server.reload();
 	done();
 });
@@ -148,8 +104,8 @@ gulp.task("serve", function () {
 		ui: false
 	});
 
-	gulp.watch("src/sass/**/*.{scss,sass}", gulp.series("style"));
-	gulp.watch("src/*.html", gulp.series("html:update")).on('change', browserSync.reload);
+	gulp.watch("src/scss/**/*.{scss,sass}", gulp.series("style"));
+	gulp.watch("src/*.html", gulp.series("html:update")).on('change', server.reload);
 	gulp.watch("src/js/script.js", gulp.series("js:update"));
 });
 
