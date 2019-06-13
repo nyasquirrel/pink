@@ -121,17 +121,21 @@
 		<div class="wrapper">
 			<div class="round-diagram__inner">
 				<section class="round-diagram__timer">
-					<img src="img/timer.png" alt="Таймер 24 часа">
+					<picture>
+						<source media="(min-width: 1200px)" srcset="img/timer--large.png">
+						<img src="img/timer.png" alt="Таймер 24 часа">
+					</picture>
+
 				</section>
 				<section class="round-diagram__information">
 					<div class="round-diagram__title">Эффект<br>
 						на 24 часа!</div>
-					<span class="round-diagram__description">
+					<div class="round-diagram__description">
 						Британские ученые провели исследования
 						и доказали, что положительный эффект
 						от использования приложения длится
 						целые сутки!
-					</span>
+					</div>
 					<div class="round-diagram__more-info-link"><a href="#">Узнать больше об исследовании</a></div>
 				</section>
 			</div>
@@ -155,9 +159,9 @@
 					<p class="reviews__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, perferendis.</p>
 				</div>
 				<ul class="dots">
-					<li class="dots__el dots__el--active"></li>
-					<li class="dots__el"></li>
-					<li class="dots__el"></li>
+					<li><a class="dots__el dots__el--active" href="#"></a></li>
+					<li><a class="dots__el" href="#"></a></li>
+					<li><a class="dots__el" href="#"></a></li>
 				</ul>
 			</div>
 		</div>
@@ -249,29 +253,31 @@
 				</td>
 			</tr>
 		</table>
-		<ul class="dots price__dots">
-			<li class="dots__el dots__el--active"></li>
-			<li class="dots__el"></li>
-			<li class="dots__el"></li>
+		<ul class="dots">
+			<li><a class="dots__el dots__el--active" href="#"></a></li>
+			<li><a class="dots__el" href="#"></a></li>
+			<li><a class="dots__el" href="#"></a></li>
 		</ul>
 	</div>
 	<div class="contacts">
 		<div class="wrapper">
-			<div class="contacts__offer">Остались вопросы?
+			<div class="contacts__offer">Остались вопросы?<br>
 				Свяжитесь с нами!</div>
-			<div class="contacts__el">
-				<div class="contacts__title">Звоните:</div>
-				<a href="tel:+78125556666" class="contacts__data">+7 (812) 555-66-66</a>
-			</div>
-			<div class="contacts__el">
-				<div class="contacts__title">Пишите:</div>
-				<a href="mailto:mail@htmlacademy.ru" class="contacts__data">mail@htmlacademy.ru</a>
-			</div>
-			<div class="contacts__el">
-				<div class="contacts__title">Приезжайте в гости:</div>
-				<a href="#" class="contacts__data">ул. Большая
-					Конюшенная, 19/8
-				</a>
+			<div class="contacts__inner">
+				<div class="contacts__el">
+					<div class="contacts__title">Звоните:</div>
+					<a href="tel:+78125556666" class="contacts__data">+7 (812) 555-66-66</a>
+				</div>
+				<div class="contacts__el">
+					<div class="contacts__title">Пишите:</div>
+					<a href="mailto:mail@htmlacademy.ru" class="contacts__data">mail@htmlacademy.ru</a>
+				</div>
+				<div class="contacts__el">
+					<div class="contacts__title">Приезжайте в гости:</div>
+					<a href="#" class="contacts__data">ул. Большая<br>
+						Конюшенная, 19/8
+					</a>
+				</div>
 			</div>
 		</div>
 		<div class="contacts__map">

@@ -4,12 +4,20 @@
   padding-top: 45px;
   text-align: center;
   font-weight: lighter;
+  margin-bottom: 30px;
   @media (min-width: $tablet-w) {
     font-size: 40px;
     line-height: 45px;
+    margin-bottom: 45px;
+  }
+  @media (min-width: $desctop-w) {
+    margin-bottom: 75px;
   }
   p {
     margin-bottom: 40px;
+    &:last-of-type {
+      margin-bottom: 0;
+    }
     @media (min-width: $tablet-w) {
       margin-bottom: 0;
     }

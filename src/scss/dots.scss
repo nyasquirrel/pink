@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   &__el {
+    display: block;
     width: 6px;
     height: 6px;
     background-color: #bec3c7;

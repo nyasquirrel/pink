@@ -1,5 +1,5 @@
 .feature {
-  background: #fff url("/img/Shape_2.png") no-repeat top/cover;
+  background: #fff url("../img/Shape_2.png") no-repeat top/cover;
   position: relative;
   &__inner {
   display: flex;
@@ -12,19 +12,42 @@
   }
   @media (min-width: $desctop-w) {
     flex-direction: column;
+    padding: 0 30px;
   }
   }
   &__screens {
     display: flex;
     align-items: center;
+    @media (min-width: $desctop-w) {
+      align-self: stretch;
+      justify-content: space-between;
+    }
   }
   &__screen-el {
     display: none;
+    position: relative;
     &:nth-of-type(3) {
       display: block;
     }
     @media (min-width: $tablet-w) {
       margin-right: 40px;
+    }
+    @media (min-width: $desctop-w) {
+      display: block;
+      margin-right: 0;
+      width: 230px;
+      text-align: center;
+      &::after {
+        position: absolute;
+        content: "";
+        width: 300px;
+        height: 189px;
+        background-image: url("../img/block_for_iscreens.png");
+        // background-color: #f2f2f2;
+        top: 300px;
+        left: -30px;
+        box-shadow: 0 -18px 14px -20px rgba(0,0,0,.3);
+      }
     }
   }
   &__information {
@@ -35,19 +58,22 @@
       width: 100%;
       flex-direction: row;
       justify-content: space-between;
-      padding: 0 30px;
+      margin-top: -30px;
     }
   }
   &__information-el {
     margin-bottom: 40px;
     text-align: center;
     line-height: 24px;
+    position: relative;
+    z-index: 2;
     @media (min-width: $tablet-w) {
       text-align: left;
     }
     @media (min-width: $desctop-w) {
-      width: 200px;
+      width: 230px;
       text-align: center;
+      margin-bottom: 10px;
     }
   }
   &__title {
@@ -56,11 +82,16 @@
     font-weight: bold;
     margin-bottom: 10px;
     @media (min-width: $desctop-w) {
-      font-size: 20px;
+      font-size: 30px;
       line-height: 30px;
+      margin-bottom: 25px;
     }
   }
   &__description {
     color: #283645;
+    @media (min-width: $desctop-w) {
+      font-size: 18px;
+      line-height: 20px;
+    }
   }
 }
