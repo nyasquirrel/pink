@@ -21,8 +21,6 @@
     background: url("/img/menu-burger.svg.png") no-repeat top center/contain;
     cursor: pointer;
     &--toggled {
-      width: 24px;
-      height: 23px;
       background: url("/img/menu-cross.svg.png") no-repeat top center/contain;
     }
   }
@@ -31,6 +29,7 @@
   .header {
     &--opened {
       background-color: #283645;
+      transition-duration: .23s;
       .header__inner {
         border-bottom: 1px solid #000;
       }

@@ -27,9 +27,6 @@
 
 @media (max-width: $desctop-w) {
   .nav-menu {
-    &--opened {
-      display: block;
-    }
     &--closed {
       display: none;
     }
