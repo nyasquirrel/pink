@@ -144,17 +144,21 @@
 	<div class="reviews">
 		<div class="wrapper">
 			<div class="reviews__inner">
+				<div class="reviews__quotes"><img src="img/quotes.svg.png" alt="Отзыв цитата"></div>
 				<div class="reviews__el reviews__el--show">
+					<div class="reviews__title-prof">25 лет, водитель трамвая</div>
 					<div class="reviews__title">Николай Петров</div>
 					<p class="reviews__descr">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
 						серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
 				</div>
 				<div class="reviews__el">
+					<div class="reviews__title-prof">11 лет, водитель автобуса</div>
 					<div class="reviews__title">Людвиг Выпивайкин</div>
 					<p class="reviews__descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et porro voluptate eum
 						perferendis fugit non exercitationem, minus accusamus quasi magnam labore fugiat qui a in?</p>
 				</div>
 				<div class="reviews__el">
+					<div class="reviews__title-prof">108 лет, водитель троллейбуса</div>
 					<div class="reviews__title">Генадий Обжоркин</div>
 					<p class="reviews__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, perferendis.</p>
 				</div>
@@ -163,13 +167,18 @@
 					<li><a class="dots__el" href="#"></a></li>
 					<li><a class="dots__el" href="#"></a></li>
 				</ul>
+				<button type="button" class="reviews__arrow reviews__arrow--left"><img src="img/left-arrow.svg.png"
+						alt="Левая стрелка отзывов">
+				</button>
+				<button type="button" class="reviews__arrow reviews__arrow--right"><img src="img/right-arrow.svg.png"
+						alt="Правая стрелка отзывов"></button>
 			</div>
 		</div>
 	</div>
 	<div class="price">
 		<table class="price__table">
 			<tr class="price__row">
-				<td scope="col" class="price__el-hidden"></td>
+				<td scope="col" class="price__no-el"></td>
 				<th scope="col" class="price__tariff">
 					<div class="price__tariff-inner">
 						<span class="price__tariff-name">База</span>
@@ -254,8 +263,8 @@
 			</tr>
 		</table>
 		<ul class="dots">
-			<li><a class="dots__el dots__el--active" href="#"></a></li>
 			<li><a class="dots__el" href="#"></a></li>
+			<li><a class="dots__el dots__el--active" href="#"></a></li>
 			<li><a class="dots__el" href="#"></a></li>
 		</ul>
 	</div>
@@ -284,6 +293,23 @@
 			<img src="/img/map.png" alt="адрес на карте">
 		</div>
 	</div>
+	<footer class="footer">
+		<div class="wrapper">
+			<div class="footer__inner">
+				<section class="footer__logo">
+					<a href="/" class="footer__logo-link"></a>
+				</section>
+				<section class="footer__social">
+					<a class="footer__soc-el" href=""><img src="img/twitter.png" alt="twitter"></a>
+					<a class="footer__soc-el" href=""><img src="img/facebook.png" alt="facebook"></a>
+					<a class="footer__soc-el" href=""><img src="img/youtube.png" alt="youtube"></a>
+				</section>
+				<section class="footer__dev"><a href=""><span>Разработано</span><img src="img/htmlacademy.png"
+							alt="htmlacademy"></a>
+				</section>
+			</div>
+		</div>
+	</footer>
 	<script src="js/script.js"></script>
 </body>
 

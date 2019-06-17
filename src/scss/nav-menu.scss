@@ -22,6 +22,15 @@
     color: #fff;
     text-decoration: none;
     text-transform: uppercase;
+    &:hover {
+      color: #d22856;
+    }
+    &:active {
+      opacity: 0.3;
+      @media (min-width: $desctop-w) {
+        color: #fff;
+      }
+    }
   }
 }
 

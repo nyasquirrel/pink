@@ -7,13 +7,26 @@
     display: block;
     width: 6px;
     height: 6px;
-    background-color: #bec3c7;
+    background-color: #283645;
+    opacity: 0.3;
     border-radius: 15px;
     margin: 0 10px;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.1;
+    }
     &--active {
       background-color: #fff;
       border: 3px solid #283645;
       box-sizing: content-box;
+      opacity: 1;
+      pointer-events: none;
+      &:hover,
+      &:active {
+        opacity: 1;
+      }
     }
   }
 }

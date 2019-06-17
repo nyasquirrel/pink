@@ -6,6 +6,9 @@
   align-items: center;
   background: #fff url("/img/Shape_2.png") no-repeat top/cover;
   border-collapse: collapse;
+  @media (min-width: $tablet-w) and (max-width: $desctop-w) {
+    padding-bottom: 30px; 
+  }
   th,
   td {
     border: 2px solid #e5e5e5;
@@ -54,8 +57,9 @@
     display: inline-flex;
     flex-direction: column;
   }
-  &__el-hidden {
-    visibility: hidden;
+  &__no-el {
+    background-color: #f2f2f2;
+    border: none !important;
   }
   &__mark {
     display: flex;
@@ -66,5 +70,17 @@
   }
   &__dots {
     margin-top: 45px;
+  }
+  &__side-name,
+  &__no-el {
+    display: none;
+    @media (min-width: $tablet-w) {
+      display: table-cell;
+    }
+  }
+  .dots {
+    @media (min-width: $tablet-w) {
+      display: none;
+    }
   }
 }

@@ -29,6 +29,15 @@
   }
   &__button {
     margin-bottom: 30px;
+    outline: none;
+    &:hover {
+      background-color: #fff;
+      color: #d22856;
+    }
+    &:active {
+      color: rgba(210,40,86,0.3);
+      background-color: #fff;
+    }
   }
   &__app-list {
     display: flex;
