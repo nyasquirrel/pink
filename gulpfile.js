@@ -97,11 +97,11 @@ gulp.task("js:update", gulp.series("js"), function (done) {
 
 gulp.task("serve", function () {
 	browserSync.init({
-		proxy: "pink.local",
-		notify: false,
-		open: true,
-		cors: true,
-		ui: false
+		server: './build',
+		// notify: false,
+		// open: true,
+		// cors: true,
+		// ui: false
 	});
 
 	gulp.watch("src/scss/**/*.{scss,sass}", gulp.series("style"));
