@@ -42,7 +42,7 @@ gulp.task("style", function () {
 				]
 			}),
 			mqpacker({
-				sort: false
+				sort: true
 			})
 		]))
 		.pipe(gulp.dest("build/css"))
