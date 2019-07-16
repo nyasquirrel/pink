@@ -6,6 +6,10 @@
   &__inner {
     display: flex;
     justify-content: space-between;
+    padding: 35px 0;
+    @media (min-width: $desctop-w) {
+      padding: 75px 0;
+    }
   }
   &__logo-link {
     display: block;
@@ -50,6 +54,9 @@
       font-size: 14px;
       line-height: 18px;
       color: #283645;
+      @media (min-width: $desctop-w) {
+        font-size: 18px;
+      }
     }
     img {
       margin-left: 15px;

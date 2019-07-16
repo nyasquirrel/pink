@@ -6,15 +6,10 @@ header.classList.remove('header--no-js');
 navMenu.classList.remove('nav-menu--no-js');
 burger.classList.remove('header__hamburger--toggled');
 
-burger.addEventListener('click', function () {
-  if (burger.classList.contains('header__hamburger--toggled')) {
-    burger.classList.remove('header__hamburger--toggled');
-    navMenu.classList.add('nav-menu--closed');
-    header.classList.add('header--closed');
-  } else {
-    burger.classList.add('header__hamburger--toggled');
-    navMenu.classList.remove('nav-menu--closed');
-    header.classList.remove('header--closed');
-    header.classList.add('header--opened');
-  }
+burger.addEventListener('click', function (event) {
+  event.preventDefault();
+  this.classList.toggle('header__hamburger--toggled');
+  navMenu.classList.toggle('nav-menu--closed');
+  header.classList.toggle('header--closed');
+  header.classList.toggle('header--opened');
 });
