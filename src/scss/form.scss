@@ -1,0 +1,20 @@
+.form {
+    color: #364351;
+    &__info {
+        fieldset {
+            border: none;
+        }
+        legend {
+            display: none;
+        }
+        label {
+            display: block;
+            padding: 0 20px;
+            color: #d22856;
+        }
+        input {
+            margin-bottom: 20px;
+            
+        }
+    }
+}

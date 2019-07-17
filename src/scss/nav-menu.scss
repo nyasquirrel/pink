@@ -34,7 +34,7 @@
   }
 }
 
-@media (max-width: $desctop-w) {
+@media (max-width: $desctop-w--down) {
   .nav-menu {
     &--closed {
       display: none;

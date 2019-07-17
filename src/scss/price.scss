@@ -17,8 +17,10 @@
   }
   &__table {
     border-collapse: collapse;
-    background-color: #fff;
     margin-bottom: 40px;
+    tr:not(:first-child) {
+      background-color: #fff;
+    }
   }
   &__tariff {
     border: 2px solid #283645;
@@ -58,7 +60,6 @@
     flex-direction: column;
   }
   &__no-el {
-    background-color: #f2f2f2;
     border: none !important;
   }
   &__mark {
