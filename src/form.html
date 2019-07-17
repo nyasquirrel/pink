@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="кг">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,60 +8,89 @@
     <link rel="stylesheet" href="css/style.min.css">
     <title>Конкурс</title>
 </head>
+
 <body>
 
     <div class="header header--closed header--no-js">
-    <div class="header__wrapper">
-        <div class="header__inner">
-            <a href="/" class="header__logo"></a>
-            </a>
-            <div class="header__hamburger header__hamburger--toggled">
+        <div class="header__wrapper">
+            <div class="header__inner">
+                <a href="/" class="header__logo"></a>
+                </a>
+                <div class="header__hamburger header__hamburger--toggled">
+                </div>
             </div>
+            <nav class="nav-menu nav-menu--closed nav-menu--no-js">
+                <ul class="nav-menu__list">
+                    <li class="nav-menu__item">
+                        <a href="/" class="nav-menu__link">Главная</a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="" class="nav-menu__link">Фотографии</a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="/form.html" class="nav-menu__link">Конкурс</a>
+                    </li>
+                    <li class="nav-menu__item">
+                        <a href="" class="nav-menu__link">HTML Academy</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
-        <nav class="nav-menu nav-menu--closed nav-menu--no-js">
-            <ul class="nav-menu__list">
-                <li class="nav-menu__item">
-                    <a href="/" class="nav-menu__link">Главная</a>
-                </li>
-                <li class="nav-menu__item">
-                    <a href="" class="nav-menu__link">Фотографии</a>
-                </li>
-                <li class="nav-menu__item">
-                    <a href="/form.html" class="nav-menu__link">Конкурс</a>
-                </li>
-                <li class="nav-menu__item">
-                    <a href="" class="nav-menu__link">HTML Academy</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
     </div>
     <div class="promo">
-            <div class="promo__wrapper">
-                    <div class="promo__competition">Конкурс на самое безбашенное путешествие с Пинк</div>
-            </div>
+        <div class="promo__wrapper">
+            <div class="promo__competition">Конкурс на самое безбашенное путешествие с Пинк</div>
+        </div>
     </div>
     <div class="competition">
         <div class="wrapper">
             <p>Поделитесь своей историей и получите шанс выиграть ценный приз - 1000 миль на вашу бонусную карту!
-            <span>Пожалуйста, заполните форму ниже:</span></p>
+                <span>Пожалуйста, заполните форму ниже:</span></p>
         </div>
     </div>
-    <div class="form">
+    <main class="main-form">
         <div class="wrapper">
-            <form action="" class="form__info">
-                <fieldset>
+            <form action="#" method="POST" class="form">
+                <fieldset class="form__info">
                     <legend>ФИО</legend>
-                        <label for="surname">Фамилия:</label>
-                        <input type="text" id="surname" placeholder="Укажите фамилию *">
-                        <label for="name">Имя:</label>
-                        <input type="text" id="name" placeholder="Укажите ваше имя *">
-                        <label for="patronymic">Отчество:</label>
-                        <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
+                    <label for="surname">Фамилия:</label>
+                    <input type="text" id="surname" placeholder="Укажите фамилию *">
+                    <label for="name">Имя:</label>
+                    <input type="text" id="name" placeholder="Укажите ваше имя *">
+                    <label for="patronymic">Отчество:</label>
+                    <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
+                </fieldset>
+                <fieldset class="form__crazy-tour">
+                    <legend>Ваши безбашенные
+                        достижения в путешествии</legend>
+                    <label>
+                        <input type="checkbox">
+                        Сделал селфи с акулой</label>
+                    <label>
+                        <input type="checkbox">
+                        Обгорел на пляже
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Видел Чака Норриса
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Накупил сувениров
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Удержал башню
+                    </label>
+                    <label>
+                        <input type="checkbox">
+                        Разгромил отель
+                    </label>
                 </fieldset>
             </form>
         </div>
-    </div>
+    </main>
     <script src='js/script.js'></script>
 </body>
+
 </html>

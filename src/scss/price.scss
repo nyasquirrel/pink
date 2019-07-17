@@ -6,7 +6,7 @@
   align-items: center;
   background: #fff url("/img/Shape_2.png") no-repeat top/cover;
   border-collapse: collapse;
-  @media (min-width: $tablet-w) and (max-width: $desctop-w) {
+  @media (min-width: $tablet-w) and (max-width: $desctop-w--down) {
     padding-bottom: 30px; 
   }
   th,

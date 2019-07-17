@@ -16,3 +16,11 @@
     padding: 0 10px;
   }
 }
+
+.main-form {
+  .wrapper {
+    @media (max-width: $tablet-w--down) {
+      padding: 0;
+    }
+  }
+}

@@ -1,11 +1,34 @@
 .form {
     color: #364351;
+    display: flex;
+    flex-direction: column;
+    legend {
+        display: block;
+        color: #d22856;
+        line-height: 18px;
+    }
+    fieldset {
+        margin-bottom: 40px;
+        border: none;
+    }
+    input {
+        font-size: 18px;
+        padding: 20px;
+    }
+    input::placeholder {
+        color: #364351;
+    }
+    input[type="checkbox"] {
+        // visibility: hidden;
+    }
     &__info {
-        fieldset {
-            border: none;
-        }
         legend {
-            display: none;
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            visibility: hidden;
         }
         label {
             display: block;
@@ -14,7 +37,23 @@
         }
         input {
             margin-bottom: 20px;
-            
+            width: 100%;
+            border: 2px solid #e5e5e5;
+        }
+        input:last-child {
+            margin-bottom: 0;
+        }
+    }
+    &__crazy-tour {
+        background-color: #f2f2f2;
+        legend {
+            background-color: #f2f2f2;
+            text-align: center;
+            padding: 40px;
+        }
+        label {
+            display: block;
+            padding: 0 20px;
         }
     }
 }
