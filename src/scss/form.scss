@@ -6,10 +6,18 @@
         display: block;
         color: #d22856;
         line-height: 18px;
+        text-transform: uppercase;
+        width: 100%;
+        @media (min-width: $tablet-w) {
+            width: auto;
+        }
     }
     fieldset {
         margin-bottom: 40px;
         border: none;
+    }
+    label {
+        display: block;
     }
     input {
         font-size: 18px;
@@ -18,8 +26,14 @@
     input::placeholder {
         color: #364351;
     }
-    input[type="checkbox"] {
-        // visibility: hidden;
+    input[type="checkbox"],
+    input[type="radio"] {
+        position: absolute;
+        z-index: -10;
+        opacity: 0;
+    }
+    &__wrap {
+        padding: 0 20px;
     }
     &__info {
         legend {
@@ -31,7 +45,6 @@
             visibility: hidden;
         }
         label {
-            display: block;
             padding: 0 20px;
             color: #d22856;
         }
@@ -52,8 +65,29 @@
             padding: 40px;
         }
         label {
-            display: block;
-            padding: 0 20px;
+            position: relative;
+            padding-left: 65px;
+            font-size: 18px;
+            line-height: 30px;
+            margin-bottom: 60px;
+        }
+        label::before {
+            content: "";
+            position: absolute;
+            width: 35px;
+            height: 35px;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            border: 2px solid #e5e5e5;
+        }
+        input[type="checkbox"]:checked+label::before {
+            background: #fff url(../img/tick.png) 50% 50% no-repeat;
+            transition-duration: .13s;
+        }
+        input[type="checkbox"]:not(:checked)+label::before {
+            background: #fff;
+            transition-delay: .13s;
         }
     }
 }

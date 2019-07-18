@@ -98,7 +98,7 @@ gulp.task("js:update", gulp.series("js"), function (done) {
 gulp.task("serve", function () {
 	browserSync.init({
 		server: './build',
-		// notify: false,
+		notify: false,
 		// open: true,
 		// cors: true,
 		// ui: false

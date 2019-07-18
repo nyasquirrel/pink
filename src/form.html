@@ -53,39 +53,45 @@
             <form action="#" method="POST" class="form">
                 <fieldset class="form__info">
                     <legend>ФИО</legend>
-                    <label for="surname">Фамилия:</label>
-                    <input type="text" id="surname" placeholder="Укажите фамилию *">
-                    <label for="name">Имя:</label>
-                    <input type="text" id="name" placeholder="Укажите ваше имя *">
-                    <label for="patronymic">Отчество:</label>
-                    <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
+                    <div class="form__wrap">
+                        <label for="surname">Фамилия:</label>
+                        <input type="text" id="surname" placeholder="Укажите фамилию *">
+                        <label for="name">Имя:</label>
+                        <input type="text" id="name" placeholder="Укажите ваше имя *">
+                        <label for="patronymic">Отчество:</label>
+                        <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
+                    </div>
                 </fieldset>
                 <fieldset class="form__crazy-tour">
                     <legend>Ваши безбашенные
-                        достижения в путешествии</legend>
-                    <label>
-                        <input type="checkbox">
-                        Сделал селфи с акулой</label>
-                    <label>
-                        <input type="checkbox">
-                        Обгорел на пляже
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        Видел Чака Норриса
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        Накупил сувениров
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        Удержал башню
-                    </label>
-                    <label>
-                        <input type="checkbox">
-                        Разгромил отель
-                    </label>
+                        достижения в путешествии
+                    </legend>
+                    <div class="form__wrap">
+                        <input type="checkbox"  value="selfie" id="selfie">
+                        <label for="selfie">
+                            Сделал селфи с акулой
+                        </label>
+                        <input type="checkbox" id="fire" value="fire">
+                        <label for="fire">
+                            Обгорел на пляже
+                        </label>
+                        <input type="checkbox" id="chuck" value="chuck">
+                        <label for="chuck">
+                            Видел Чака Норриса
+                        </label>
+                        <input type="checkbox" id="souvenir" value="souvenir">
+                        <label for="souvenir">
+                            Накупил сувениров
+                        </label>
+                        <input type="checkbox" id="state" value="state">
+                        <label for="state">
+                            Удержал башню
+                        </label>
+                        <input type="checkbox" id="hotel" value="hotel">
+                        <label for="hotel">
+                            Разгромил отель
+                        </label>
+                    </div>
                 </fieldset>
             </form>
         </div>
