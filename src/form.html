@@ -93,9 +93,58 @@
                         </label>
                     </div>
                 </fieldset>
+                <fieldset class="form__contacts">
+                    <div class="form__wrap">
+                        <legend>Контакты</legend>
+                        <label for="phone">Номер телефона</label>
+                        <input type="tel" id="phone" placeholder="Номер, пожалуйста:">
+                        <label for="adress">адрес почты</label>
+                        <input type="email" id="adress" placeholder="Введите почту *">
+                    </div>
+                </fieldset>
+                <fieldset class="form__app-tour">
+                    <div class="form__wrap">
+                        <legend>С каким приложением путешествовали?</legend>
+                        <input type="radio" id="ios" value="ios" name="app-tour">
+                        <label for="ios">Pink для iOS</label>
+                        <input type="radio" id="android" value="android" name="app-tour">
+                        <label for="android">Pink на Android</label>
+                        <input type="radio" id="winphone" value="winphone" name="app-tour">
+                        <label for="winphone">Windows Phone</label>
+                    </div>
+                </fieldset>
+                <fieldset class="form__emo">
+                    <div class="form__wrap">
+                        <legend>Опишите свои эмоции</legend>
+                        <textarea name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
+                    </div>
+                </fieldset>
+                <div class="form__wrap">
+                    <input type="submit" value="Отправить форму">
+                    <div class="require"><span>*</span> — обязательные поля</div>
+                </div>
             </form>
         </div>
     </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__inner">
+                <section class="footer__logo">
+                    <a href="/" class="footer__logo-link"></a>
+                </section>
+                <section class="footer__social">
+                    <a class="footer__soc-el" href="#"><img src="img/twitter.png" alt="twitter"></a>
+                    <a class="footer__soc-el" href="#"><img src="img/facebook.png" alt="facebook"></a>
+                    <a class="footer__soc-el" href="#"><img src="img/youtube.png" alt="youtube"></a>
+                </section>
+                <section class="footer__dev">
+                    <a href="#">
+                    <span>Разработано</span><img src="img/htmlacademy.png"
+                            alt="htmlacademy"></a>
+                </section>
+            </div>
+        </div>
+    </footer>
     <script src='js/script.js'></script>
 </body>
 

@@ -5,10 +5,21 @@
   }
   &__inner {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
+    align-items: center;
     padding: 35px 0;
+    @media (min-width: $tablet-w) {
+      flex-direction: row;
+    }
     @media (min-width: $desctop-w) {
       padding: 75px 0;
+    }
+    section:not(:last-child) {
+      margin-bottom: 40px;
+      @media (min-width: $tablet-w) {
+        margin-bottom: 0;
+      }
     }
   }
   &__logo-link {
@@ -30,11 +41,10 @@
     display: flex;
     border: 3px solid rgba(40, 54, 69, 0.1);
     border-radius: 25px;
-    margin-right: 18px;
     justify-content: center;
     align-items: center;
-    &:last-child {
-      margin-right: 0;
+    &:not(:last-child) {
+      margin-right: 18px;
     }
     &:hover {
       border-color: rgba(40, 54, 69, 1);
@@ -62,4 +72,7 @@
       margin-left: 15px;
     }
   }
+}
+.main-form+.footer {
+  display: block;
 }
