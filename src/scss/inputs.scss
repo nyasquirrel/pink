@@ -4,13 +4,25 @@ label {
 input,
 textarea {
     font-size: 18px;
-    padding: 20px;
+    padding: 16px;
     border: 2px solid #e5e5e5;
+    border-radius: 3px;
     width: 100%;
-}
-input::placeholder,
-textarea::placeholder {
-    color: #364351;
+    resize: none;
+    transition-duration: .1s;
+    &::placeholder {
+        color: #364351;
+    }
+    &:hover {
+    outline: none;
+    border: 2px solid #000;
+    transition-duration: .25s;
+    }
+    &:focus {
+        outline: none;
+        border-color: #d22856;
+        transition-duration: .1s;
+    }
 }
 input[type="submit"] {
     background-color: #2aab6d;
@@ -19,6 +31,17 @@ input[type="submit"] {
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
+    cursor: pointer;
+    &:hover {
+        background-color: #1c9b5e;
+    }
+    &:active {
+        color: rgba(255,255,255,.3);
+    }
+    &:disabled {
+        background-color: #e5e5e5;
+        border-color: #e5e5e5;
+    }
 }
 input[type="checkbox"],
 input[type="radio"] {
@@ -34,41 +57,44 @@ input[type="radio"]+label {
     font-size: 18px;
     line-height: 30px;
     margin-bottom: 60px;
+    &::before {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    border: 2px solid #e5e5e5;
+    border-radius: 3px;
+    cursor: pointer;
+    }
+    &:hover::before {
+        outline: none;
+        border: 2px solid #283645;
+        transition-duration: .1s;
+    }
+}
+input[type="radio"]+label::before {
+    border-radius: 30px;
 }
 input[type="checkbox"]:checked+label::before {
     background: #fff url(../img/tick.png) 50% 50% no-repeat;
+    border-color: #d22856;
     transition-duration: .13s;
 }
 input[type="checkbox"]:not(:checked)+label::before {
     background: #fff;
-    transition-delay: .13s;
+    transition-duration: .13s;
 }
-input[type="checkbox"]+label::before {
-    content: "";
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 2px solid #e5e5e5;
-}
-input[type="radio"]+label::before {
-    content: "";
-    position: absolute;
-    width: 35px;
-    height: 35px;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    border: 2px solid #e5e5e5;
-    border-radius: 30px;
-}
+
 input[type="radio"]:checked+label::before {
-    background: #fff url("../img/tick.png") 50% 50% no-repeat;
+    background-color: #d22856;
+    border-color: #d22856;
+    box-shadow: inset 0px 0px 0px 9px #fff;
     transition-duration: .13s;
 }
 input[type="radio"]:not(:checked)+label::before {
     background: #fff;
-    transition-delay: .13s;
+    transition-duration: .13s;
 }

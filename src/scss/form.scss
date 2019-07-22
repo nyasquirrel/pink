@@ -18,11 +18,21 @@
     fieldset {
         margin-bottom: 40px;
         border: none;
+        @media (min-width: $tablet-w) {
+            border: 2px solid #e5e5e5;
+        }
     }
     &__wrap {
         padding: 0 20px;
+        @media (min-width: $tablet-w) {
+            padding: 0 60px;
+        }
     }
     &__info {
+        border: none !important;
+        @media (min-width: $tablet-w) {
+            order: 1;
+        }
         legend {
             position: absolute;
             clip: rect(0 0 0 0);
@@ -34,9 +44,22 @@
         label {
             padding: 10px 20px;
             color: #d22856;
+            text-transform: uppercase;
+
         }
-        input:not(:last-child) {
+        &-inner {
+            display: flex;
+            flex-direction: column;
             margin-bottom: 20px;
+            @media (min-width: $tablet-w) {
+                margin-bottom: 50px;
+            }
+            &:last-of-type {
+                margin-bottom: 0px;
+            }
+            @media (min-width: $tablet-w) {
+                flex-direction: row;
+            }
         }
     }
     &__crazy-tour {
@@ -61,8 +84,16 @@
     }
     &__app-tour {
         background-color: #f2f2f2;
+        @media (min-width: $tablet-w) {
+            order: 2;
+            background-color: #fff;
+
+        }
         legend {
             background-color: #f2f2f2;
+            @media (min-width: $tablet-w) {
+                background-color: #fff;
+            }
         }
         textarea {
             min-height: 200px;

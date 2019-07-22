@@ -54,12 +54,18 @@
                 <fieldset class="form__info">
                     <legend>ФИО</legend>
                     <div class="form__wrap">
-                        <label for="surname">Фамилия:</label>
-                        <input type="text" id="surname" placeholder="Укажите фамилию *">
+                        <div class="form__info-inner">
+                            <label for="surname">Фамилия:</label>
+                            <input type="text" id="surname" placeholder="Укажите фамилию *">
+                        </div>
+                        <div class="form__info-inner">
                         <label for="name">Имя:</label>
                         <input type="text" id="name" placeholder="Укажите ваше имя *">
+                        </div>
+                        <div class="form__info-inner">
                         <label for="patronymic">Отчество:</label>
                         <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
+                        </div>
                     </div>
                 </fieldset>
                 <fieldset class="form__crazy-tour">
@@ -105,7 +111,7 @@
                 <fieldset class="form__app-tour">
                     <div class="form__wrap">
                         <legend>С каким приложением путешествовали?</legend>
-                        <input type="radio" id="ios" value="ios" name="app-tour">
+                        <input type="radio" id="ios" value="ios" name="app-tour" checked>
                         <label for="ios">Pink для iOS</label>
                         <input type="radio" id="android" value="android" name="app-tour">
                         <label for="android">Pink на Android</label>
