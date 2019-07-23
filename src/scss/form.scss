@@ -3,6 +3,12 @@
     display: flex;
     flex-direction: column;
     margin-bottom: 30px;
+    flex-wrap: wrap;
+    @media (min-width: $desctop-w) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
     legend {
         display: block;
         color: #d22856;
@@ -20,6 +26,7 @@
         border: none;
         @media (min-width: $tablet-w) {
             border: 2px solid #e5e5e5;
+            margin-bottom: 20px;
         }
     }
     &__wrap {
@@ -30,8 +37,13 @@
     }
     &__info {
         border: none !important;
+        padding: 0 20px;
         @media (min-width: $tablet-w) {
             order: 1;
+            padding: 0;
+        }
+        @media (min-width: $desctop-w) {
+            width: 47%;
         }
         legend {
             position: absolute;
@@ -45,41 +57,96 @@
             padding: 10px 20px;
             color: #d22856;
             text-transform: uppercase;
-
-        }
-        &-inner {
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 20px;
             @media (min-width: $tablet-w) {
-                margin-bottom: 50px;
+                padding: 0;
+                margin-right: 20px;
             }
-            &:last-of-type {
-                margin-bottom: 0px;
-            }
+        }
+        .form__input-wrapper {
             @media (min-width: $tablet-w) {
                 flex-direction: row;
+                align-items: center;
             }
+        }
+    }
+    &__input-wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        @media (min-width: $tablet-w) {
+            margin-bottom: 50px;
+        }
+        &:last-of-type {
+            margin-bottom: 0px;
         }
     }
     &__crazy-tour {
         background-color: #f2f2f2;
+        @media (min-width: $tablet-w) {
+            order: 4;
+            background-color: #fff;
+
+        }
+        @media (min-width: $desctop-w) {
+            width: 100%;            
+        }
         legend {
             background-color: #f2f2f2;
+            @media (min-width: $tablet-w) {
+                background-color: #fff;
+            }
+        }
+        .form__input-wrapper {
+            margin-bottom: 0;
+        }
+        .form__wrap {
+            @media (min-width: $desctop-w) {
+            display: flex;
+            justify-content: space-between;
+            }
         }
     }
     &__contacts {
+        text-transform: uppercase;
+        @media (min-width: $tablet-w) {
+            order: 3;
+            background-color: #fff;
+        }
+        @media (min-width: $desctop-w) {
+            width: 100%;
+        }
         legend {
-            position: absolute;
-            clip: rect(0 0 0 0);
-            width: 1px;
-            height: 1px;
-            margin: -1px;
-            visibility: hidden;
+            display: none;
+            @media (min-width: $tablet-w) {
+                display: block;
+            }
         }
         label {
             color: #d22856;
             padding: 10px 20px;
+        }
+        input {
+        position: relative;
+            @media (min-width: $tablet-w) {
+
+            }
+        }
+        .form__wrap {
+            @media (min-width: $desctop-w) {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+        .form__input-wrapper {
+            position: relative;
+            @media (min-width: $tablet-w) {
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                margin-bottom: 20px;
+            }
+            @media (min-width: $desctop-w) {
+                width: 47%;
+            }
         }
     }
     &__app-tour {
@@ -88,6 +155,9 @@
             order: 2;
             background-color: #fff;
 
+        }
+        @media (min-width: $desctop-w) {
+            width: 47%;
         }
         legend {
             background-color: #f2f2f2;
@@ -98,16 +168,53 @@
         textarea {
             min-height: 200px;
             resize: none;
-}
+        }
     }
-    input[type="submit"] {
+    &__emo {
+        width: 100%;
+        @media (min-width: $tablet-w) {
+            order: 5;
+        }
+        legend {
+            padding-top: 0;
+            padding-bottom: 20px;
+            @media (min-width: $tablet-w) {
+                padding: 40px;
+        }
+        }
+        textarea {
+            min-height: 200px;
+            @media (min-width: $tablet-w) {
+                min-height: 190px;
+                margin-bottom: 40px;
+            }
+        }
+    }
+    &__submit {
+        display: flex;
+        flex-direction: column;
+        padding: 0 20px;
+        align-items: center;
+        @media (min-width: $tablet-w) {
+            padding: 0;
+            order: 6;
+            flex-direction: row;
+            margin: 40px 0 20px;
+            justify-content: space-between;
+        }
+        input[type="submit"] {
         margin-bottom: 40px;
-    }
-    .require {
-        text-align: center;
-        text-transform: uppercase;
-        span {
-            color: #d22856;
+            @media (min-width: $tablet-w) {
+                margin-bottom: 0;
+            }
+         }
+        .require {
+            text-align: center;
+            text-transform: uppercase;
+
+            span {
+                color: #d22856;
+            }
         }
     }
 }

@@ -3,6 +3,8 @@ label {
 }
 input,
 textarea {
+    position: relative;
+    z-index: 1;
     font-size: 18px;
     padding: 16px;
     border: 2px solid #e5e5e5;
@@ -10,6 +12,7 @@ textarea {
     width: 100%;
     resize: none;
     transition-duration: .1s;
+    background-color: rgba(0,0,0,0);
     &::placeholder {
         color: #364351;
     }
@@ -31,6 +34,9 @@ input[type="submit"] {
     color: #fff;
     font-weight: bold;
     text-transform: uppercase;
+    @media (min-width: $tablet-w) {
+        width: 300px;
+    };
     cursor: pointer;
     &:hover {
         background-color: #1c9b5e;
@@ -97,4 +103,31 @@ input[type="radio"]:checked+label::before {
 input[type="radio"]:not(:checked)+label::before {
     background: #fff;
     transition-duration: .13s;
+}
+input[type="tel"]+span, 
+input[type="email"]+span {
+    display: none;
+    @media (min-width: $tablet-w) { 
+        position: absolute;
+        width: 60px;
+        height: 60px;
+        border-radius: 3px;
+        top: 0;
+        right: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #e5e5e5;
+        transition-duration: .15s;
+    }
+}
+input[type="tel"]:hover+span, 
+input[type="email"]:hover+span {
+    background-color: #000;
+    transition-duration: .25s;
+}
+input[type="tel"]:focus+span, 
+input[type="email"]:focus+span {
+    opacity: 0;
+    transition-duration: .1s;
 }

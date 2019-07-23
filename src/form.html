@@ -53,79 +53,93 @@
             <form action="#" method="POST" class="form">
                 <fieldset class="form__info">
                     <legend>ФИО</legend>
-                    <div class="form__wrap">
-                        <div class="form__info-inner">
+                        <div class="form__input-wrapper">
                             <label for="surname">Фамилия:</label>
                             <input type="text" id="surname" placeholder="Укажите фамилию *">
                         </div>
-                        <div class="form__info-inner">
+                        <div class="form__input-wrapper">
                         <label for="name">Имя:</label>
                         <input type="text" id="name" placeholder="Укажите ваше имя *">
                         </div>
-                        <div class="form__info-inner">
+                        <div class="form__input-wrapper">
                         <label for="patronymic">Отчество:</label>
                         <input type="text" id="patronymic" placeholder="Ну и отчество тоже">
                         </div>
-                    </div>
                 </fieldset>
                 <fieldset class="form__crazy-tour">
                     <legend>Ваши безбашенные
                         достижения в путешествии
                     </legend>
                     <div class="form__wrap">
-                        <input type="checkbox"  value="selfie" id="selfie">
-                        <label for="selfie">
-                            Сделал селфи с акулой
-                        </label>
-                        <input type="checkbox" id="fire" value="fire">
-                        <label for="fire">
-                            Обгорел на пляже
-                        </label>
-                        <input type="checkbox" id="chuck" value="chuck">
-                        <label for="chuck">
-                            Видел Чака Норриса
-                        </label>
-                        <input type="checkbox" id="souvenir" value="souvenir">
-                        <label for="souvenir">
-                            Накупил сувениров
-                        </label>
-                        <input type="checkbox" id="state" value="state">
-                        <label for="state">
-                            Удержал башню
-                        </label>
-                        <input type="checkbox" id="hotel" value="hotel">
-                        <label for="hotel">
-                            Разгромил отель
-                        </label>
+                        <div class="form__input-wrapper">
+                            <input type="checkbox"  value="selfie" id="selfie">
+                            <label for="selfie">
+                                Сделал селфи с акулой
+                            </label>
+                            <input type="checkbox" id="fire" value="fire">
+                            <label for="fire">
+                                Обгорел на пляже
+                            </label>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <input type="checkbox" id="chuck" value="chuck">
+                            <label for="chuck">
+                                Видел Чака Норриса
+                            </label>
+                            <input type="checkbox" id="souvenir" value="souvenir">
+                            <label for="souvenir">
+                                Накупил сувениров
+                            </label>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <input type="checkbox" id="state" value="state">
+                            <label for="state">
+                                Удержал башню
+                            </label>
+                            <input type="checkbox" id="hotel" value="hotel">
+                            <label for="hotel">
+                                Разгромил отель
+                            </label>
+                        </div>
                     </div>
                 </fieldset>
                 <fieldset class="form__contacts">
+                    <legend>Контактная информация</legend>
                     <div class="form__wrap">
-                        <legend>Контакты</legend>
-                        <label for="phone">Номер телефона</label>
-                        <input type="tel" id="phone" placeholder="Номер, пожалуйста:">
-                        <label for="adress">адрес почты</label>
-                        <input type="email" id="adress" placeholder="Введите почту *">
+                        <div class="form__input-wrapper">
+                            <label for="phone">Номер телефона</label>
+                            <input type="tel" id="phone" placeholder="Номер, пожалуйста:">
+                            <span class="form__input-icon">
+                                <img src="./img/phone.png" alt="phone">
+                            </span>
+                        </div>
+                        <div class="form__input-wrapper">
+                            <label for="adress">Адрес почты</label>
+                            <input type="email" id="adress" placeholder="Введите почту *">
+                            <span class="form__input-icon">
+                                <img src="./img/mail.png" alt="mail">
+                            </span>
+                        </div>
                     </div>
                 </fieldset>
                 <fieldset class="form__app-tour">
+                    <legend>С каким приложением путешествовали?</legend>
                     <div class="form__wrap">
-                        <legend>С каким приложением путешествовали?</legend>
                         <input type="radio" id="ios" value="ios" name="app-tour" checked>
                         <label for="ios">Pink для iOS</label>
                         <input type="radio" id="android" value="android" name="app-tour">
                         <label for="android">Pink на Android</label>
                         <input type="radio" id="winphone" value="winphone" name="app-tour">
                         <label for="winphone">Windows Phone</label>
-                    </div>
+                </div>
                 </fieldset>
                 <fieldset class="form__emo">
+                    <legend>Опишите свои эмоции</legend>
                     <div class="form__wrap">
-                        <legend>Опишите свои эмоции</legend>
                         <textarea name="emotions" placeholder="Можно прям в красках, не стесняясь в выражениях"></textarea>
                     </div>
                 </fieldset>
-                <div class="form__wrap">
+                <div class="form__submit">
                     <input type="submit" value="Отправить форму">
                     <div class="require"><span>*</span> — обязательные поля</div>
                 </div>
