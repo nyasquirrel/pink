@@ -53,12 +53,23 @@
   &__map {
     overflow: hidden;
     position: relative;
+    height: 200px;
+    @media (min-width: $tablet-w) {
+      height: 375px;
+    }
+    @media (min-width: $desctop-w) {
+      height: 500px;
+    }
     &::before {
       content: "";
       position: absolute;
       width: 100%;
       height: 123px;
-      background: url("/img/triangle-white-footer.svg.png") no-repeat top center/cover;
+      background: url("/img/triangle-white-footer.svg.png") no-repeat top center;
+      background-size: contain;
+      @media (min-width: $desctop-w) {
+        background-size: 100% 100%;
+      }
     }
   }
 }
