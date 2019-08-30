@@ -1,12 +1,12 @@
-var header = document.querySelector('.header');
-var navMenu = document.querySelector('.nav-menu');
-var burger = document.querySelector('.header__hamburger')
+let header = document.querySelector('.header');
+let navMenu = document.querySelector('.nav-menu');
+let burger = document.querySelector('.header__hamburger');
 
 header.classList.remove('header--no-js');
 navMenu.classList.remove('nav-menu--no-js');
 burger.classList.remove('header__hamburger--toggled');
 
-burger.addEventListener('click', function (event) {
+burger.addEventListener('click', function(event) {
   event.preventDefault();
   this.classList.toggle('header__hamburger--toggled');
   navMenu.classList.toggle('nav-menu--closed');
@@ -15,7 +15,7 @@ burger.addEventListener('click', function (event) {
 });
 
 
-ymaps.ready(function () {
+/* ymaps.ready(function () {
   var map = new ymaps.Map("map", {
     center: [55.76, 37.64],
     zoom: 10
@@ -26,4 +26,4 @@ ymaps.ready(function () {
       var placemark = new Placemark([55.37, 35.45]);
     });
   }
-});
+}); */

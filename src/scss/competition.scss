@@ -1,11 +1,12 @@
 .competition {
     text-align: center;
     padding: 50px 0;
-    font-size: 18px;
+    font-size: 14px;
     line-height: 30px;
     color: #364351;
     @media (min-width: $tablet-w) {
         padding: 90px 0 70px;
+        font-size: 18px;
     }
     p {
         @media (min-width: $tablet-w) {
@@ -19,6 +20,11 @@
         display: none;
         @media (min-width: $tablet-w) {
             display: inline;
+        }
+    }
+    br {
+        @media (min-width: $tablet-w) and (max-width: $desctop-w--down) {
+            display: none;
         }
     }
 }
