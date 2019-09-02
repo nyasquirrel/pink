@@ -6,4 +6,32 @@
     &__photo {
         margin-bottom: 40px;
     }
+    &__filter {
+        display: flex;
+        justify-content: space-around;
+        margin-bottom: 40px;
+        align-items: center;
+        span {
+            display: block;
+            cursor: pointer;
+        }
+    }
+    &__filter-crop {
+        width: 44px;
+        height: 44px;
+        background: url('../img/crop.png') no-repeat center;
+    }
+    &__filter-fill {
+        width: 48px;
+        height: 43px;
+        background: url('../img/fill.png') no-repeat center;
+        &:hover {
+            background-image: url();
+        }
+    }
+    &__filter-contrast {
+        width: 32px;
+        height: 32px;
+        background: url('../img/contrast.png') no-repeat center;
+    }
 }
