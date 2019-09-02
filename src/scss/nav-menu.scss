@@ -27,14 +27,14 @@
     }
     &:active {
       opacity: 0.3;
-      @media (min-width: $desctop-w) {
+      @media (min-width: $desktop-w) {
         color: #fff;
       }
     }
   }
 }
 
-@media (max-width: $desctop-w--down) {
+@media (max-width: $desktop-w--down) {
   .nav-menu {
     &--closed {
       display: none;
@@ -44,7 +44,7 @@
     }
   }
 }
-@media (min-width: $desctop-w) {
+@media (min-width: $desktop-w) {
   .nav-menu {
     display: flex;
     align-items: center;

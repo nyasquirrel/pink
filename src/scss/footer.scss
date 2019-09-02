@@ -12,7 +12,7 @@
     @media (min-width: $tablet-w) {
       flex-direction: row;
     }
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       padding: 75px 0;
     }
     section:not(:last-child) {
@@ -27,8 +27,8 @@
     width: 147px;
     height: 40px;
     background: #fff url("../img/logotype-footer-tablet.svg.png") no-repeat top center;
-    @media (min-width: $desctop-w) {
-      background-image: url("../img/logotype-footer-desctop.svg.png");
+    @media (min-width: $desktop-w) {
+      background-image: url("../img/logotype-footer-desktop.svg.png");
     }
   }
   &__social {
@@ -64,7 +64,7 @@
       font-size: 14px;
       line-height: 18px;
       color: #283645;
-      @media (min-width: $desctop-w) {
+      @media (min-width: $desktop-w) {
         font-size: 18px;
       }
     }

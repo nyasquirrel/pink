@@ -8,7 +8,7 @@
   &__wrapper {
     width: 100%;
   }
-  &__competition {
+  &__page-title {
     margin: 100px auto 50px;
     padding: 0 20px;
     text-align: center;
@@ -44,15 +44,6 @@
   }
   &__button {
     margin-bottom: 30px;
-    outline: none;
-    &:hover {
-      background-color: #fff;
-      color: #d22856;
-    }
-    &:active {
-      color: rgba(210,40,86,0.3);
-      background-color: #fff;
-    }
   }
   &__app-list {
     display: flex;
@@ -73,9 +64,6 @@
     position: absolute;
     top: 175px;
     right: -10px;
-  }
-  &__competition {
-    
   }
 }
 @media (min-width: $mobile-w) {
@@ -119,7 +107,7 @@
     }
   }
 }
-@media (min-width: $desctop-w) {
+@media (min-width: $desktop-w) {
   .promo {
     background: #1d2631 url('/img/back-desktop.jpg.png') top center/cover no-repeat;
     &__wrapper {

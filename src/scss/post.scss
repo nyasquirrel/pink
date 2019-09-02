@@ -1,0 +1,9 @@
+.post {
+    padding: 20px;
+    background-color: #f2f2f2;
+    display: flex;
+    flex-direction: column;
+    &__photo {
+        margin-bottom: 40px;
+    }
+}

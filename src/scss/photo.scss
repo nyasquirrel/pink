@@ -1,0 +1,123 @@
+.photo {
+    &-listing {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &-item {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 20px;
+        margin-right: auto;
+        margin-left: auto;
+        width: 300px;
+        @media (min-width: $tablet-w) {
+            margin-left: 0;
+        }
+        @media (min-width: $desktop-w) {
+            margin-bottom: 50px;
+        }
+        @media (min-width: $tablet-w) and (max-width: $desktop-w--down) {
+            &:nth-child(even) {
+                margin-right: 0;
+            }
+        }
+        @media (min-width: $desktop-w) {
+            &:nth-child(3n) {
+                margin-right: 0;
+            }
+        }
+        &--daily {
+            width: 100%;
+            @media (min-width: $tablet-w) {
+                margin-bottom: 50px;
+            }
+        }
+        &__description {
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            padding: 20px;
+            background-color: #f2f2f2;
+            color: #283645;
+            flex-grow: 1;
+            line-height: 24px;
+            @media (min-width: $tablet-w) {
+                min-height: 156px;
+                padding-right: 30px;
+            }
+            &--daily {
+                @media (min-width: $tablet-w) {
+                    flex-direction: row;
+                    min-height: auto;
+                    .photo-item__text {
+                        order: 3;
+                    }
+                    .photo-item__likes-counter {
+                        margin-left: auto;
+                        margin-top: 0;
+                        padding-right: 30px;
+                        align-self: flex-start;
+                    }
+                    .photo-item__text {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
+        &__user-name {
+            font-weight: 700;
+        }
+        &__text {
+            margin-bottom: 20px;
+        }
+        &__up-time {
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+        &__likes-counter {
+            position: relative;
+            font-size: 12px;
+            color: #d22856;
+            text-transform: uppercase;
+            padding-left: 30px;
+            margin-top: auto;
+            @media (min-width: $tablet-w) {
+                padding-left: 0;                
+            }
+        }
+        &__like {
+            position: absolute;
+            left: 0;
+            top: 50%;
+            width: 13px;
+            height: 12px;
+            transform:: translateY(-50%);
+            background: url("../img/icon-heart.png") no-repeat 100% 100%;
+            cursor: pointer;
+            @media (min-width: $tablet-w) {
+                left: auto;
+                right: 0;
+            }
+        }
+        &__icon-daily {
+            position: absolute;
+            right: 20px;
+            top: 0;
+            font-weight: 700;
+            background-color: #d22856;
+            color: #fff;
+            padding: 10px 20px;
+            font-size: 12px;
+            line-height: 24px;
+            text-transform: uppercase;
+            @media (min-width: $tablet-w) {
+                top: 55px;
+            }
+        }
+    }
+    img {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+}

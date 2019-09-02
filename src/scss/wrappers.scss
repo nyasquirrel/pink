@@ -1,4 +1,5 @@
 .wrapper {
+  position: relative;
   min-width: 280px;
   padding: 0 20px;
   margin: 0 auto;
@@ -10,7 +11,7 @@
   }
 }
 
-@media (min-width: $desctop-w) {
+@media (min-width: $desktop-w) {
   .wrapper{
     width: 960px;
     padding: 0 10px;

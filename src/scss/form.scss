@@ -4,7 +4,7 @@
     flex-direction: column;
     margin-bottom: 30px;
     flex-wrap: wrap;
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
@@ -42,7 +42,7 @@
             order: 1;
             padding: 0;
         }
-        @media (min-width: $desctop-w) {
+        @media (min-width: $desktop-w) {
             width: 47%;
         }
         legend {
@@ -87,7 +87,7 @@
             background-color: #fff;
 
         }
-        @media (min-width: $desctop-w) {
+        @media (min-width: $desktop-w) {
             width: 100%;            
         }
         legend {
@@ -100,7 +100,7 @@
             margin-bottom: 0;
         }
         .form__wrap {
-            @media (min-width: $desctop-w) {
+            @media (min-width: $desktop-w) {
             display: flex;
             justify-content: space-between;
             }
@@ -112,7 +112,7 @@
             order: 3;
             background-color: #fff;
         }
-        @media (min-width: $desctop-w) {
+        @media (min-width: $desktop-w) {
             width: 100%;
         }
         legend {
@@ -132,7 +132,7 @@
             }
         }
         .form__wrap {
-            @media (min-width: $desctop-w) {
+            @media (min-width: $desktop-w) {
                 display: flex;
                 justify-content: space-between;
             }
@@ -144,7 +144,7 @@
                 align-items: flex-start;
                 margin-bottom: 20px;
             }
-            @media (min-width: $desctop-w) {
+            @media (min-width: $desktop-w) {
                 width: 47%;
             }
         }
@@ -156,7 +156,7 @@
             background-color: #fff;
 
         }
-        @media (min-width: $desctop-w) {
+        @media (min-width: $desktop-w) {
             width: 47%;
         }
         legend {

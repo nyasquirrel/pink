@@ -10,7 +10,7 @@
     flex-direction: row;
     padding-top: 50px;
   }
-  @media (min-width: $desctop-w) {
+  @media (min-width: $desktop-w) {
     flex-direction: column;
     padding: 0 30px;
   }
@@ -18,7 +18,7 @@
   &__screens {
     display: flex;
     align-items: center;
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       align-self: stretch;
       justify-content: space-between;
     }
@@ -32,7 +32,7 @@
     @media (min-width: $tablet-w) {
       margin-right: 40px;
     }
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       display: block;
       margin-right: 0;
       width: 230px;
@@ -52,7 +52,7 @@
   &__information {
     display: flex;
     flex-direction: column;
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       display: flex;
       width: 100%;
       flex-direction: row;
@@ -69,7 +69,7 @@
     @media (min-width: $tablet-w) {
       text-align: left;
     }
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       width: 230px;
       text-align: center;
       margin-bottom: 10px;
@@ -80,7 +80,7 @@
     line-height: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       font-size: 30px;
       line-height: 30px;
       margin-bottom: 25px;
@@ -88,7 +88,7 @@
   }
   &__description {
     color: #283645;
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       font-size: 18px;
       line-height: 20px;
     }

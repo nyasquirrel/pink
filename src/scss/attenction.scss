@@ -1,18 +1,18 @@
-.competition {
+.attenction {
     text-align: center;
     padding: 50px 0;
     font-size: 14px;
     line-height: 30px;
     color: #364351;
     @media (min-width: $tablet-w) {
-        padding: 90px 0 70px;
+        padding: 90px 0;
         font-size: 18px;
     }
     p {
         @media (min-width: $tablet-w) {
             padding: 0 60px;
         }
-        @media (min-width: $desctop-w) {
+        @media (min-width: $desktop-w) {
             padding: 0 90px;
         }
     }
@@ -23,8 +23,17 @@
         }
     }
     br {
-        @media (min-width: $tablet-w) and (max-width: $desctop-w--down) {
+        @media (min-width: $tablet-w) and (max-width: $desktop-w--down) {
             display: none;
+        }
+    }
+    &:nth-of-type(2) {
+        padding: 30px 0 50px;
+    }
+    &-second {
+        padding: 30px 0 50px;
+        @media (min-width: $tablet-w) {
+            padding: 50px 0 70px;            
         }
     }
 }

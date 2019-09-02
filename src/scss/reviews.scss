@@ -37,7 +37,7 @@
       font-size: 20px;
       margin-bottom: 0;
     }
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       font-size: 24px;
     }
   }
@@ -48,14 +48,14 @@
       display: block;
       margin-bottom: 40px;
     }
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       font-size: 18px;
     }
   }
   &__descr {
     padding: 0 3px;
     margin-bottom: 40px;
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       width: 700px;
     }
   }
@@ -64,7 +64,7 @@
     width: 80px;
     height: 65px;
     margin-bottom: 50px;
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       display: block;
     }
   }
@@ -74,7 +74,7 @@
     border: none;
     background-color: #fff;
     outline: none;
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       display: block;
       position: absolute;
       top: 50%;
@@ -87,7 +87,7 @@
     }
   }
   .dots {
-    @media (min-width: $desctop-w) {
+    @media (min-width: $desktop-w) {
       display: none;
     }
   }
