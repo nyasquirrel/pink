@@ -6,7 +6,7 @@ header.classList.remove('header--no-js');
 navMenu.classList.remove('nav-menu--no-js');
 burger.classList.remove('header__hamburger--toggled');
 
-burger.addEventListener('click', function(event) {
+burger.addEventListener('click', function (event) {
   event.preventDefault();
   this.classList.toggle('header__hamburger--toggled');
   navMenu.classList.toggle('nav-menu--closed');
@@ -16,16 +16,20 @@ burger.addEventListener('click', function(event) {
 
 let filterIcons = document.querySelectorAll('.post__filter-icon');
 
-for(let i=0; i<filterIcons.length; i++) {
-  filterIcons[i].addEventListener('click', function(event) {
+for (let i = 0; i < filterIcons.length; i++) {
+  filterIcons[i].addEventListener('click', function (event) {
     event.preventDefault();
-    for(let i = 0; i < filterIcons.length; i++) {
+    for (let i = 0; i < filterIcons.length; i++) {
       filterIcons[i].classList.remove('post__filter-icon--active');
     }
     this.classList.add('post__filter-icon--active');
   })
 };
 
+
+$(document).ready(function () {
+  $("#range-slider").slider();
+});
 
 /* ymaps.ready(function () {
   var map = new ymaps.Map("map", {

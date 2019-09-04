@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +8,13 @@
     <link rel="stylesheet" href="css/style.min.css">
     <title>Фото - Pink</title>
 </head>
+
 <body>
-    <svg>
+    <svg style="display: none;">
         <symbol viewBox="0 0 48 48" id="crop">
             <path fill="none" d="M0,0h48v48H0V0z"></path>
-            <path d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z">
+            <path
+                d="M34,30h4V14c0-2.21-1.79-4-4-4H18v4h16V30z M14,34V2h-4v8H2v4h8v20c0,2.21,1.79,4,4,4h20v8h4v-8h8v-4H14z">
             </path>
         </symbol>
         <symbol viewBox="-35.422 -7.96 31.92 31.92" id="contrast">
@@ -56,8 +59,9 @@
     </div>
     <div class="promo">
         <div class="promo__wrapper">
-            <h1 class="promo__page-title">Фотографии<br> пользователей</div>
+            <h1 class="promo__page-title">Фотографии<br> пользователей
         </div>
+    </div>
     </div>
     <div class="attenction">
         <div class="wrapper">
@@ -80,13 +84,14 @@
                 </picture>
                 <div class="wrapper">
                     <div class="photo-item__description photo-item__description--daily">
-                        <div class="photo-item__user-name">Анна 
+                        <div class="photo-item__user-name">Анна
                             <span class="photo-item__up-time">
                                 (5 минут назад)
                             </span>
                         </div>
                         <div class="photo-item__text">
-                            Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе, задавайте свои вопросы!
+                            Прыгать или нет? Напишите в коментарии свой совет и смотрите прямую трансляцию в перископе,
+                            задавайте свои вопросы!
                         </div>
                         <div class="photo-item__likes-counter">
                             <span class="photo-item__like">
@@ -106,7 +111,7 @@
                         <img src="img/photo-1-mobile.jpg" alt="Фото 1">
                     </picture>
                     <div class="photo-item__description">
-                        <div class="photo-item__user-name">Левон 
+                        <div class="photo-item__user-name">Левон
                             <span class="photo-item__up-time">
                                 (5 часов назад)
                             </span>
@@ -125,7 +130,7 @@
                         <img src="img/photo-2-mobile.jpg" alt="Фото 2">
                     </picture>
                     <div class="photo-item__description">
-                        <div class="photo-item__user-name">Антон 
+                        <div class="photo-item__user-name">Антон
                             <span class="photo-item__up-time">
                                 (12 часов назад)
                             </span>
@@ -144,7 +149,7 @@
                         <img src="img/photo-3-mobile.jpg" alt="Фото 3">
                     </picture>
                     <div class="photo-item__description">
-                        <div class="photo-item__user-name">Борис 
+                        <div class="photo-item__user-name">Борис
                             <span class="photo-item__up-time">
                                 (20 часов назад)
                             </span>
@@ -182,7 +187,7 @@
                         <img src="img/photo-5-mobile.jpg" alt="Фото 5">
                     </picture>
                     <div class="photo-item__description">
-                        <div class="photo-item__user-name">Максим 
+                        <div class="photo-item__user-name">Максим
                             <span class="photo-item__up-time">
                                 (40 часов назад)
                             </span>
@@ -201,7 +206,7 @@
                         <img src="img/photo-6-mobile.jpg" alt="Фото 6">
                     </picture>
                     <div class="photo-item__description">
-                        <div class="photo-item__user-name">Надежда 
+                        <div class="photo-item__user-name">Надежда
                             <span class="photo-item__up-time">
                                 (45 часов назад)
                             </span>
@@ -232,18 +237,27 @@
             </section>
             <section class="post__action">
                 <section class="post__filter">
-                    <svg class="post__filter-icon post__filter-icon--crop post__filter-icon--active">
-                        <use xlink:href="#crop">
-                        </use>
-                    </svg>
-                    <svg class="post__filter-icon post__filter-icon--fill">
-                        <use xlink:href="#fill">
-                        </use>
-                    </svg>
-                    <svg class="post__filter-icon post__filter-icon--contrast">
-                        <use xlink:href="#contrast">
-                        </use>
-                    </svg>
+                    <div class="post__filter-item">
+                        <svg class="post__filter-icon post__filter-icon--crop post__filter-icon--active">
+                            <use xlink:href="#crop">
+                            </use>
+                        </svg>
+                    </div>
+                    <div class="post__filter-item">
+                        <svg class="post__filter-icon post__filter-icon--fill">
+                            <use xlink:href="#fill">
+                            </use>
+                        </svg>
+                    </div>
+                    <div class="post__filter-item">
+                        <svg class="post__filter-icon post__filter-icon--contrast">
+                            <use xlink:href="#contrast">
+                            </use>
+                        </svg>
+                    </div>
+                    <div class="post__filter-range--mobile">
+                        <div id="range-slider"></div>
+                    </div>
                 </section>
                 <section class="post__buttons">
                     <button class="button post__post-btn">Запостить</button>
@@ -252,8 +266,28 @@
             </section>
         </div>
     </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <div class="footer__inner">
+                <section class="footer__logo">
+                    <a href="/" class="footer__logo-link"></a>
+                </section>
+                <section class="footer__social">
+                    <a class="footer__soc-el" href="#"><img src="img/twitter.png" alt="twitter"></a>
+                    <a class="footer__soc-el" href="#"><img src="img/facebook.png" alt="facebook"></a>
+                    <a class="footer__soc-el" href="#"><img src="img/youtube.png" alt="youtube"></a>
+                </section>
+                <section class="footer__dev">
+                    <a href="#">
+                        <span>Разработано</span><img src="img/htmlacademy.png" alt="htmlacademy"></a>
+                </section>
+            </div>
+        </div>
+    </footer>
 
-    
-        <script src="js/script.min.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/script.min.js" type="text/javascript"></script>
+
 </body>
+
 </html>
