@@ -14,6 +14,18 @@ burger.addEventListener('click', function(event) {
   header.classList.toggle('header--opened');
 });
 
+let filterIcons = document.querySelectorAll('.post__filter-icon');
+
+for(let i=0; i<filterIcons.length; i++) {
+  filterIcons[i].addEventListener('click', function(event) {
+    event.preventDefault();
+    for(let i = 0; i < filterIcons.length; i++) {
+      filterIcons[i].classList.remove('post__filter-icon--active');
+    }
+    this.classList.add('post__filter-icon--active');
+  })
+};
+
 
 /* ymaps.ready(function () {
   var map = new ymaps.Map("map", {

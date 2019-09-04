@@ -16,22 +16,49 @@
             cursor: pointer;
         }
     }
-    &__filter-crop {
-        width: 44px;
-        height: 44px;
-        background: url('../img/crop.png') no-repeat center;
-    }
-    &__filter-fill {
-        width: 48px;
-        height: 43px;
-        background: url('../img/fill.png') no-repeat center;
+    &__filter-icon {
+        fill: #283645;
+        opacity: 0.3;
         &:hover {
-            background-image: url();
+            opacity: 0.5;
+            cursor: pointer;
         }
     }
-    &__filter-contrast {
+    &__filter-icon--active {
+        fill: #d22856;
+        opacity: 1;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    &__filter-icon--crop {
+        width: 44px;
+        height: 44px;
+    }
+    &__filter-icon--fill {
+        width: 48px;
+        height: 43px;
+    }
+    &__filter-icon--contrast {
         width: 32px;
         height: 32px;
-        background: url('../img/contrast.png') no-repeat center;
+    }
+    &__buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    &__post-btn {
+        border: 3px solid #d22856;
+        color: #d22856;
+        background: none;
+        margin-bottom: 12px;
+    }
+    &__cancel-btn {
+        border: 3px solid #283645;
+        color: #283645;
+        background: none;
+        opacity: 0.1;
     }
 }
