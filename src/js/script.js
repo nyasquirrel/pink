@@ -34,7 +34,17 @@ $(document).ready(function () {
 $(document).ready(function () {
   $(".owl-carousel").owlCarousel({
     loop: true,
-    items: 1
+    items: 1,
+    responsive: {
+      0: {
+        dots: true
+      },
+      1200: {
+        dots: false,
+        nav: true,
+        navText: ['<img src="img/left-arrow.svg.png" alt="Левая стрелка отзывов">', '<img src="img/right-arrow.svg.png" alt="Правая стрелка отзывов">']
+      }
+    } 
   });
 });
 

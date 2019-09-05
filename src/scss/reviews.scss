@@ -18,14 +18,11 @@
     position: relative;
   }
   &__el {
-    // display: none;
-    &--show {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      @media (min-width: $tablet-w) {
-        flex-direction: column-reverse;
-      }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    @media (min-width: $tablet-w) {
+      flex-direction: column-reverse;
     }
   }
   &__title {
@@ -68,27 +65,68 @@
       display: block;
     }
   }
-  &__arrow {
+  .owl-prev,
+  .owl-next {
     display: none;
     cursor: pointer;
     border: none;
     background-color: #fff;
     outline: none;
+    opacity: 0.3;
     @media (min-width: $desktop-w) {
       display: block;
       position: absolute;
-      top: 50%;
+      top: 15%;
     }
-    &--left {
-      left: 0;
+    &:hover {
+      opacity: 0.6;
     }
-    &--right {
-      right: 0;
+    &:active {
+      opacity: 0.1;
     }
+  }
+  .owl-prev {
+    left: 0;
+  }
+  .owl-next {
+    right: 0;
   }
   .dots {
     @media (min-width: $desktop-w) {
       display: none;
+    }
+  }
+  .owl-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  .owl-dot {
+    display: block;
+    width: 6px;
+    height: 6px;
+    background-color: #283645 !important;
+    opacity: 0.3;
+    border-radius: 15px;
+    margin: 0 10px;
+    outline: none;
+    &:hover {
+      opacity: 0.6;
+    }
+    &:active {
+      opacity: 0.1;
+    }
+    &.active {
+      background-color: #fff !important;
+      border: 3px solid #283645;
+      box-sizing: content-box;
+      opacity: 1;
+      pointer-events: none;
+      margin: 0 7px;
+      &:hover,
+      &:active {
+        opacity: 1;
+      }
     }
   }
 } 
