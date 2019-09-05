@@ -28,7 +28,14 @@ for (let i = 0; i < filterIcons.length; i++) {
 
 
 $(document).ready(function () {
-  $("#range-slider").slider();
+  $(".range-slider").slider();
+});
+
+$(document).ready(function () {
+  $(".owl-carousel").owlCarousel({
+    loop: true,
+    items: 1
+  });
 });
 
 /* ymaps.ready(function () {

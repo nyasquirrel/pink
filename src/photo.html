@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <link rel="stylesheet" href="css/style.min.css">
     <title>Фото - Pink</title>
 </head>
@@ -228,42 +231,57 @@
             </div>
         </div>
         <div class="post">
-            <section class="post__photo">
-                <picture>
-                    <source media="(min-width: 1200px)" srcset="img/photo-7-desktop.jpg">
-                    <source media="(min-width: 660px)" srcset="img/photo-7-tablet.jpg">
-                    <img src="img/photo-7-mobile.jpg" alt="Фото для постинга">
-                </picture>
-            </section>
-            <section class="post__action">
-                <section class="post__filter">
-                    <div class="post__filter-item">
-                        <svg class="post__filter-icon post__filter-icon--crop post__filter-icon--active">
-                            <use xlink:href="#crop">
-                            </use>
-                        </svg>
-                    </div>
-                    <div class="post__filter-item">
-                        <svg class="post__filter-icon post__filter-icon--fill">
-                            <use xlink:href="#fill">
-                            </use>
-                        </svg>
-                    </div>
-                    <div class="post__filter-item">
-                        <svg class="post__filter-icon post__filter-icon--contrast">
-                            <use xlink:href="#contrast">
-                            </use>
-                        </svg>
-                    </div>
-                    <div class="post__filter-range--mobile">
-                        <div id="range-slider"></div>
-                    </div>
-                </section>
-                <section class="post__buttons">
-                    <button class="button post__post-btn">Запостить</button>
-                    <button class="button post__cancel-btn">Отмена</button>
-                </section>
-            </section>
+            <div class="post__wrapper">
+                <div class="post__inner">
+                    <section class="post__photo">
+                        <picture>
+                            <source media="(min-width: 1200px)" srcset="img/photo-7-desktop.jpg">
+                            <source media="(min-width: 660px)" srcset="img/photo-7-tablet.jpg">
+                            <img src="img/photo-7-mobile.jpg" alt="Фото для постинга">
+                        </picture>
+                    </section>
+                    <section class="post__action">
+                        <section class="post__filter">
+                            <div class="post__filter-items-inner">
+                                <div class="post__filter-item">
+                                    <svg class="post__filter-icon post__filter-icon--crop post__filter-icon--active">
+                                        <use xlink:href="#crop">
+                                        </use>
+                                    </svg>
+                                    <div class="post__filter-range">
+                                        <div class="range-slider"></div>
+                                    </div>
+                                </div>
+                                <div class="post__filter-item">
+                                    <svg class="post__filter-icon post__filter-icon--fill">
+                                        <use xlink:href="#fill">
+                                        </use>
+                                    </svg>
+                                    <div class="post__filter-range">
+                                        <div class="range-slider"></div>
+                                    </div>
+                                </div>
+                                <div class="post__filter-item">
+                                    <svg class="post__filter-icon post__filter-icon--contrast">
+                                        <use xlink:href="#contrast">
+                                        </use>
+                                    </svg>
+                                    <div class="post__filter-range">
+                                        <div class="range-slider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="post__filter-range post__filter-range--mobile">
+                                <div class="range-slider"></div>
+                            </div>
+                        </section>
+                        <section class="post__buttons">
+                            <button type="button" class="button post__post-btn">Запостить</button>
+                            <button type="button" class="button post__cancel-btn">Отмена</button>
+                        </section>
+                    </section>
+                </div>
+            </div>
         </div>
     </main>
     <footer class="footer">
@@ -285,7 +303,7 @@
         </div>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
     <script src="js/script.min.js" type="text/javascript"></script>
 
 </body>

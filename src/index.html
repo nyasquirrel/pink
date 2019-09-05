@@ -8,6 +8,11 @@
 	<link rel="stylesheet" href="css/style.min.css">
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=3019beb9-9fb3-4f05-8903-9d79f588d15f&lang=ru_RU" type="text/javascript">
 	</script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+	<link rel="stylesheet"
+		href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css" />
 	<!-- <script type="text/javascript">
 		ymaps.ready(function () {
 			var map = new ymaps.Map("map", {
@@ -160,22 +165,24 @@
 		<div class="wrapper">
 			<div class="reviews__inner">
 				<div class="reviews__quotes"><img src="img/quotes.svg.png" alt="Отзыв цитата"></div>
-				<div class="reviews__el reviews__el--show">
-					<div class="reviews__title-prof">25 лет, водитель трамвая</div>
-					<div class="reviews__title">Николай Петров</div>
-					<p class="reviews__descr">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
-						серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
-				</div>
-				<div class="reviews__el">
-					<div class="reviews__title-prof">11 лет, водитель автобуса</div>
-					<div class="reviews__title">Людвиг Выпивайкин</div>
-					<p class="reviews__descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et porro voluptate eum
-						perferendis fugit non exercitationem, minus accusamus quasi magnam labore fugiat qui a in?</p>
-				</div>
-				<div class="reviews__el">
-					<div class="reviews__title-prof">108 лет, водитель троллейбуса</div>
-					<div class="reviews__title">Генадий Обжоркин</div>
-					<p class="reviews__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, perferendis.</p>
+				<div class="owl-carousel">
+					<div class="reviews__el reviews__el--show">
+						<div class="reviews__title-prof">25 лет, водитель трамвая</div>
+						<div class="reviews__title">Николай Петров</div>
+						<p class="reviews__descr">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные
+							серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</p>
+					</div>
+					<div class="reviews__el">
+						<div class="reviews__title-prof">11 лет, водитель автобуса</div>
+						<div class="reviews__title">Людвиг Выпивайкин</div>
+						<p class="reviews__descr">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et porro voluptate eum
+							perferendis fugit non exercitationem, minus accusamus quasi magnam labore fugiat qui a in?</p>
+					</div>
+					<div class="reviews__el">
+						<div class="reviews__title-prof">108 лет, водитель троллейбуса</div>
+						<div class="reviews__title">Генадий Обжоркин</div>
+						<p class="reviews__descr">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis, perferendis.</p>
+					</div>
 				</div>
 				<ul class="dots">
 					<li><a class="dots__el dots__el--active" href="#"></a></li>
