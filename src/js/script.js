@@ -48,15 +48,19 @@ $(document).ready(function () {
   });
 });
 
-/* ymaps.ready(function () {
-  var map = new ymaps.Map("map", {
-    center: [55.76, 37.64],
-    zoom: 10
+
+ymaps.ready(function () {
+  var myMap = new ymaps.Map('map', {
+    center: [59.938631, 30.323055],
+    zoom: 17,
+    controls: []
+  });
+  
+  var myPlacemark = new ymaps.Placemark([59.938631, 30.323055], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: '/img/map-marker.png',
+    iconImageSize: [36, 35],
   });
 
-  if (map) {
-    ymaps.modules.require(['Placemark', 'Circle'], function (Placemark, Circle) {
-      var placemark = new Placemark([55.37, 35.45]);
-    });
-  }
-}); */
+  myMap.geoObjects.add(myPlacemark );
+});
